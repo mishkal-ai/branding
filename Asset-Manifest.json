@@ -1,0 +1,361 @@
+{
+  "name": "mishkal brand kit",
+  "version": "1.0",
+  "files": [
+    {
+      "path": "Mishkal-Brand-Guide-v1.pdf",
+      "bytes": 67333,
+      "sha256": "69a61c10e96b7f790233de1f70ac0ccf76a8c2997bfd435450173c414af72c3e"
+    },
+    {
+      "path": "Mishkal-Identity-Preview.png",
+      "bytes": 62458,
+      "sha256": "81ed98ec2e823ea802aba472caf4de6b284fd921b2ece37b1da8164776caed41"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4877,
+      "sha256": "17ada6a7d7c0f3c457f3899654683bdfcfd747b3b971a5938063a5e29564d50f"
+    },
+    {
+      "path": "brand-tokens.css",
+      "bytes": 1271,
+      "sha256": "03224f26b9734e8df3acdf501bba7a2384e9dcd9ae5354b13813c7fab5e99bd8"
+    },
+    {
+      "path": "docs/Implementation.md",
+      "bytes": 2495,
+      "sha256": "eb470363341c94651c45e1bc1810139b7a07c5828ffe47a2525d13718f0258cc"
+    },
+    {
+      "path": "docs/Size-Proof.png",
+      "bytes": 96069,
+      "sha256": "87f306fbab1a76280f091f51c20bb3138492e134a39d53ef9948980148d593a4"
+    },
+    {
+      "path": "docs/Verification.md",
+      "bytes": 1464,
+      "sha256": "3af6800908ad5d2ca3d7a145c72f81a8534193a92e83cb869df7c5244ad6a5a8"
+    },
+    {
+      "path": "fonts/IBMPlexMono-Medium.ttf",
+      "bytes": 136704,
+      "sha256": "a9b4c49bb299e05b5f6c481e7fb5e78943d2793249a0c8874ab574a2d1ea6755"
+    },
+    {
+      "path": "fonts/IBMPlexMono-OFL.txt",
+      "bytes": 4456,
+      "sha256": "7e6b2818edbd8f6a01ae80641cc8f16a51080d08fb4e532be3a0b6f74adb07da"
+    },
+    {
+      "path": "fonts/IBMPlexMono-Regular.ttf",
+      "bytes": 135580,
+      "sha256": "6a3412f058c7d8dfd9170c41e85ade48e5156ecb89356110ca57a0a27734af46"
+    },
+    {
+      "path": "fonts/Manrope-OFL.txt",
+      "bytes": 4387,
+      "sha256": "58172e0c0fac2cda8a37b348164bb55e44b0e69051e557e92b1d3f6910141f7b"
+    },
+    {
+      "path": "fonts/Manrope-Variable.ttf",
+      "bytes": 164700,
+      "sha256": "3ae11c49db0455a3cc33e37d380f20fdb8c7f8b41dc07625c177e3d87a9d6ae6"
+    },
+    {
+      "path": "geometry.json",
+      "bytes": 4752,
+      "sha256": "eac41584fdd186f11d3274a0056a56c3b65e9d4087a3496ffdc3a0da819f0d55"
+    },
+    {
+      "path": "icons/favicon.ico",
+      "bytes": 3680,
+      "sha256": "6bfee4cc3234d2f6d600e6fe268a27a6c707b950232f9d574426587b9c3e3591"
+    },
+    {
+      "path": "icons/favicon.svg",
+      "bytes": 1105,
+      "sha256": "1dd8272891d003447017e81d01c767d3bb34b1ac3cc986902cfc02998bff80b8"
+    },
+    {
+      "path": "icons/mishkal-app-icon.svg",
+      "bytes": 1148,
+      "sha256": "b0ce007e3a042ab0f3b999f345afd1520b6e90a5f2b328139fe3751c92a36513"
+    },
+    {
+      "path": "icons/mishkal-icon-128.png",
+      "bytes": 2629,
+      "sha256": "ac70a71192b6db5b8a0dfe26a7bb9a96047d88222413e34618f87a25f75f0583"
+    },
+    {
+      "path": "icons/mishkal-icon-16.png",
+      "bytes": 431,
+      "sha256": "68b002c24c92fdd9fd8539b8164e66b95c22c22a6c0cbe0985f3aa3a81c7d3ff"
+    },
+    {
+      "path": "icons/mishkal-icon-180.png",
+      "bytes": 3775,
+      "sha256": "c8be3a383208dccf7faf926248f77f896013a73d3ac972b95125a6d6f2d66507"
+    },
+    {
+      "path": "icons/mishkal-icon-192.png",
+      "bytes": 4140,
+      "sha256": "72a29aac0e9a79f50228f46cdbb466f6abc14e583c129928572eaec5c7276a8f"
+    },
+    {
+      "path": "icons/mishkal-icon-24.png",
+      "bytes": 624,
+      "sha256": "f4246a57dd2750a5e992e6279eda9e688df4e19330f3e46f944f35c261f462bf"
+    },
+    {
+      "path": "icons/mishkal-icon-256.png",
+      "bytes": 5504,
+      "sha256": "4b9952276e201aa6e048330b786aa93308b092cbfb99928c8d53d0a5cc93b741"
+    },
+    {
+      "path": "icons/mishkal-icon-32.png",
+      "bytes": 775,
+      "sha256": "8855eb1e803d4c29b04e0f8b52d0fe6cc778d5a0879dbb0eec573431e58e30a9"
+    },
+    {
+      "path": "icons/mishkal-icon-48.png",
+      "bytes": 1040,
+      "sha256": "cd00b6c86352dbd6909cd08a5e34552bbb6fb7691d5d7fff6c3d2372785428e1"
+    },
+    {
+      "path": "icons/mishkal-icon-512.png",
+      "bytes": 11746,
+      "sha256": "911b59963be86e65d12fdfd7bd3ea2a1987e9f92c13ae0dd9679ac3b79fce499"
+    },
+    {
+      "path": "icons/mishkal-icon-64.png",
+      "bytes": 1364,
+      "sha256": "a64a53a70ae07a21deb68b76d367458ac4d06f34a73843ac58acc1007a6c04c5"
+    },
+    {
+      "path": "icons/site.webmanifest",
+      "bytes": 321,
+      "sha256": "5963f742fa60818a849f80e720de3fe928f86ea747e6ae9bf9656acabbac0203"
+    },
+    {
+      "path": "png/mishkal-horizontal-black-1600.png",
+      "bytes": 29046,
+      "sha256": "0f046909630bd1767158ec795ad7c9e024b687e90fec331637f483fdac757dda"
+    },
+    {
+      "path": "png/mishkal-horizontal-color-1600.png",
+      "bytes": 31674,
+      "sha256": "6dba7a5e9e276a53efaf4c60c6127c7a3f443bc9527302638e14a22680af6ba1"
+    },
+    {
+      "path": "png/mishkal-horizontal-dark-background-1600.png",
+      "bytes": 30831,
+      "sha256": "1eca1014aef79a0555244c101b1314b6ac9cb84416238300a6c044f8e84830bc"
+    },
+    {
+      "path": "png/mishkal-horizontal-ink-1600.png",
+      "bytes": 31946,
+      "sha256": "342d4e1485fc9c07c299089d05a02e1c0f75041f907b3a62c8d74905bcacd5c6"
+    },
+    {
+      "path": "png/mishkal-horizontal-light-background-1600.png",
+      "bytes": 31403,
+      "sha256": "80df488955e0856c801c3a8eb208f419ed03134257f01397f66738a9525140cb"
+    },
+    {
+      "path": "png/mishkal-horizontal-white-1600.png",
+      "bytes": 36707,
+      "sha256": "9998869dd070af8eba3c379fef9dfb6a86f00d98a5060b6488e602da945678cf"
+    },
+    {
+      "path": "png/mishkal-stacked-black-1600.png",
+      "bytes": 44381,
+      "sha256": "68639993fddfc58ebb4f27ab3311ed55fd367904b44c1e3d72883fb3ade44b71"
+    },
+    {
+      "path": "png/mishkal-stacked-color-1600.png",
+      "bytes": 47368,
+      "sha256": "2c1f416097f854e167804c8eaca841aa6e7b66d4b0ddfaab0f2bdff59cd19eff"
+    },
+    {
+      "path": "png/mishkal-stacked-ink-1600.png",
+      "bytes": 47725,
+      "sha256": "9d4017a6bb6a4cf0c8910a7f73908e540f18d6a120626629f0bdac557398bcdf"
+    },
+    {
+      "path": "png/mishkal-stacked-white-1600.png",
+      "bytes": 55377,
+      "sha256": "9b2e0bf92fbf4e3609f761ea19b6494cd88656ea656406563d351d3fcf9fefee"
+    },
+    {
+      "path": "png/mishkal-symbol-black-512.png",
+      "bytes": 10963,
+      "sha256": "4a73277f14425ece9330366ff092ae3c4c05af28f34cce6c8bc86bdaa3f8a002"
+    },
+    {
+      "path": "png/mishkal-symbol-color-512.png",
+      "bytes": 11322,
+      "sha256": "92800c3ebd2eef5dbce7cd52e5b59f7f95c579bd115377e7433d117edf926d23"
+    },
+    {
+      "path": "png/mishkal-symbol-ink-512.png",
+      "bytes": 11277,
+      "sha256": "3b13b3752b83324a9ced4843180cb679ea5b000e7e20f07ececbfe5942ffdc19"
+    },
+    {
+      "path": "png/mishkal-symbol-small-black-512.png",
+      "bytes": 10738,
+      "sha256": "1873fccc07eb7e2bf356cb6cf4817e05fde05c521bab6f675b19b542a7d68a9e"
+    },
+    {
+      "path": "png/mishkal-symbol-small-color-512.png",
+      "bytes": 10994,
+      "sha256": "11615d5ae1a6a1b72da4968ebfb3d87aca92990d9637ec4d69032afeb261e2f2"
+    },
+    {
+      "path": "png/mishkal-symbol-small-ink-512.png",
+      "bytes": 10892,
+      "sha256": "bc1c2ec05069c141068219911ef5c611f131bc41182d7a1945ffd19496f64fca"
+    },
+    {
+      "path": "png/mishkal-symbol-small-white-512.png",
+      "bytes": 12979,
+      "sha256": "e94a055cfc8cd9053826a616f52c685b637fe0d0e820a69f01120c253d37c6a3"
+    },
+    {
+      "path": "png/mishkal-symbol-white-512.png",
+      "bytes": 13306,
+      "sha256": "4b40afb10da5017f3097362225db2c65fde9456e2966f30155e77352a8139100"
+    },
+    {
+      "path": "png/mishkal-wordmark-black-1600.png",
+      "bytes": 27109,
+      "sha256": "ed72e83f8c28f0e23c250f4ad68be21c051c7f049495a1c0d662b87c01c3d6b4"
+    },
+    {
+      "path": "png/mishkal-wordmark-color-1600.png",
+      "bytes": 28083,
+      "sha256": "04424ef783edd248548ce34be2e42f8645e4f1e20c1eb771dd06082665bcb5a4"
+    },
+    {
+      "path": "png/mishkal-wordmark-ink-1600.png",
+      "bytes": 28083,
+      "sha256": "04424ef783edd248548ce34be2e42f8645e4f1e20c1eb771dd06082665bcb5a4"
+    },
+    {
+      "path": "png/mishkal-wordmark-white-1600.png",
+      "bytes": 34477,
+      "sha256": "d017a0e0d012bb6ec7161532fd7546a0f18d7a8d99d67e9e06ce5640e738c6ec"
+    },
+    {
+      "path": "svg/mishkal-horizontal-black.svg",
+      "bytes": 3893,
+      "sha256": "4d69a44966b8c3082f1f747dc78b49681968047b8fcb26a279d9cbe93962bfb6"
+    },
+    {
+      "path": "svg/mishkal-horizontal-color.svg",
+      "bytes": 3893,
+      "sha256": "313d036453947dcec14df838f96f0e0c3ed8450d387f44a6474fb49536bb7138"
+    },
+    {
+      "path": "svg/mishkal-horizontal-dark-background.svg",
+      "bytes": 3925,
+      "sha256": "d1fc074f5a9b4cc70feedb8df034e5e2460ae106769fe051a68586e4af5768bc"
+    },
+    {
+      "path": "svg/mishkal-horizontal-ink.svg",
+      "bytes": 3893,
+      "sha256": "ce1f5fa6b46f4bba86df0ae3e613a2cfca29ef362ae16583461bc6a80ce76aea"
+    },
+    {
+      "path": "svg/mishkal-horizontal-light-background.svg",
+      "bytes": 3925,
+      "sha256": "be9d44914bb2d20adbfd74d2f281b132bf9fd222fd5a8621f6a71f234e29da5f"
+    },
+    {
+      "path": "svg/mishkal-horizontal-white.svg",
+      "bytes": 3893,
+      "sha256": "9075a89af19f69a704a6790e88575ef7f35d6794be6dbe0cd43324797586b3aa"
+    },
+    {
+      "path": "svg/mishkal-stacked-black.svg",
+      "bytes": 3889,
+      "sha256": "04db429ffbfd325200ee4dab28f4f0c0e0bb65a272083b9c042d564be434870f"
+    },
+    {
+      "path": "svg/mishkal-stacked-color.svg",
+      "bytes": 3889,
+      "sha256": "575cd72390a90376ce55b1f28678244ee6871b0b84a6dfc371c82f868ead522f"
+    },
+    {
+      "path": "svg/mishkal-stacked-ink.svg",
+      "bytes": 3889,
+      "sha256": "6dcd364de1eb130e989c07c78ca2f183a8f6460a48fb3c17795a0c33ddb6310d"
+    },
+    {
+      "path": "svg/mishkal-stacked-white.svg",
+      "bytes": 3889,
+      "sha256": "14a5392e1e3027ef6e875117d3ede061bea0ffa271f1026c6e5f68e85b10cac9"
+    },
+    {
+      "path": "svg/mishkal-symbol-black.svg",
+      "bytes": 1104,
+      "sha256": "038df67fe0ba45df7b78f4120cc60cb88e0040a5939cdd95ba3b925600f057bf"
+    },
+    {
+      "path": "svg/mishkal-symbol-color.svg",
+      "bytes": 1104,
+      "sha256": "c9b03a204c7c9897c96a6737caf7313afd4eb1beed1d8960f8e80b0f37855277"
+    },
+    {
+      "path": "svg/mishkal-symbol-ink.svg",
+      "bytes": 1104,
+      "sha256": "c2f5d4f846e1361961c149b60d11aa2ea8439215faa8d4afe02721e7fee9ee0a"
+    },
+    {
+      "path": "svg/mishkal-symbol-small-black.svg",
+      "bytes": 1067,
+      "sha256": "cf4e80c6691be62ec038fccd2d118be281a3840cd96541c69043c9bb5a0c36a1"
+    },
+    {
+      "path": "svg/mishkal-symbol-small-color.svg",
+      "bytes": 1067,
+      "sha256": "ae71a17f524d7ce2b5f6a73374b0e2d9da1f8df1aad3040f87b1f483cc98c625"
+    },
+    {
+      "path": "svg/mishkal-symbol-small-ink.svg",
+      "bytes": 1067,
+      "sha256": "980759dcddd06cab22769d05ad899357ac26ff8bb4750ac57c2946665394a678"
+    },
+    {
+      "path": "svg/mishkal-symbol-small-white.svg",
+      "bytes": 1067,
+      "sha256": "50f59edc539f7bfb441dd0895bddd25ae53f300d7430fdda45418de980ac8297"
+    },
+    {
+      "path": "svg/mishkal-symbol-white.svg",
+      "bytes": 1104,
+      "sha256": "1558a7210d1d3416427046abb3e900a558ff72ecfd3feb2f81e41c34b44f6647"
+    },
+    {
+      "path": "svg/mishkal-wordmark-black.svg",
+      "bytes": 2957,
+      "sha256": "dbfb0f9f4455fa0bf4bd3e3280517d5f389df0ee0721ea499bd6ac718c25ac07"
+    },
+    {
+      "path": "svg/mishkal-wordmark-color.svg",
+      "bytes": 2957,
+      "sha256": "e53a9d0abcd0e2338fd7f8e29e121d3921ff9048615144769a295a5b2c016c2e"
+    },
+    {
+      "path": "svg/mishkal-wordmark-ink.svg",
+      "bytes": 2957,
+      "sha256": "e53a9d0abcd0e2338fd7f8e29e121d3921ff9048615144769a295a5b2c016c2e"
+    },
+    {
+      "path": "svg/mishkal-wordmark-white.svg",
+      "bytes": 2957,
+      "sha256": "53fd92dab5e1debfa8d1c1ed83adac190542452a22a13ffe4853918414dc9f13"
+    }
+  ]
+}

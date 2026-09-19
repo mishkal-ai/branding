@@ -1,0 +1,40 @@
+/* mishkal identity 1.0. The logo itself uses SVG paths, not these fonts. */
+@font-face {
+  font-family: 'Manrope';
+  src: url('./fonts/Manrope-Variable.ttf') format('truetype');
+  font-weight: 200 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'IBM Plex Mono';
+  src: url('./fonts/IBMPlexMono-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'IBM Plex Mono';
+  src: url('./fonts/IBMPlexMono-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+:root {
+  --mishkal-teal: #007f78;
+  --mishkal-ink: #10252b;
+  --mishkal-paper: #f5f4ef;
+  --mishkal-navy: #071c22;
+  --mishkal-teal-text: #006d67;
+  --mishkal-aqua: #34d6bb;
+  --mishkal-slate: #52666b;
+  --mishkal-divider: #ccd7d4;
+  --mishkal-white: #ffffff;
+  --mishkal-font-body: 'Manrope', system-ui, sans-serif;
+  --mishkal-font-data: 'IBM Plex Mono', ui-monospace, monospace;
+  --mishkal-body-size: 1rem;
+  --mishkal-body-leading: 1.5;
+}
+/* Prefer ink or teal-text for small text on paper. Aqua is for dark surfaces.
+   Divider is decorative: do not rely on it alone to identify controls.
+   The SVG files include minimum clear space. Preserve their viewBox. */
