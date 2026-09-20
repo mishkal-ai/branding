@@ -18,6 +18,10 @@ and Webapp own their compositions. The shared frontend role serves explicitly
 assigned consumers, while Branding has an explicitly bounded writer. A consumer
 upgrade follows the distribution contract and its own registered task.
 
+CI cancels superseded runs of the same pull request and bounds `brand-kit` to
+10 minutes. Every source, manifest and distribution check remains enabled;
+see [repository controls](docs/Repository.md) for scope and verification limits.
+
 ## Assets
 
 | Folder or file | Contents |

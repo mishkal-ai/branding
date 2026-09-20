@@ -47,8 +47,8 @@
     },
     {
       "path": ".github/workflows/ci.yml",
-      "bytes": 480,
-      "sha256": "89d4801888911226893a22f4722a763c6f00659d94100abaf026a858dac27969"
+      "bytes": 763,
+      "sha256": "629cccb1ac6a4da58982ca651e1d49aea10442005705a27d70437a802956170f"
     },
     {
       "path": ".gitignore",
@@ -62,8 +62,8 @@
     },
     {
       "path": "CHANGELOG.md",
-      "bytes": 1500,
-      "sha256": "bef19e06aedb4c384673d093ddfb8b00afad1fa7537e51ed74ff1a6bc7e72c38"
+      "bytes": 1781,
+      "sha256": "404f9918aebf22a7cd33465b88eae7ab06ee3a03136b231308df5cbb7bae3468"
     },
     {
       "path": "Mishkal-Brand-Guide-v1.pdf",
@@ -77,8 +77,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 7449,
-      "sha256": "c85084b2e58b440a048fe3f901ea4ada143b49d60d4d9cb60f6fde9b51bff2f5"
+      "bytes": 7684,
+      "sha256": "2593c7fe543ee60bd2ed317c4706e176323771288fab7209af27a03a5f725f29"
     },
     {
       "path": "Web-Distribution.json",
@@ -102,8 +102,8 @@
     },
     {
       "path": "docs/Repository.md",
-      "bytes": 2243,
-      "sha256": "831bd4431441c3b5310a0c22b366a7c07102f43b9922b407dbcce8e8f7dcd055"
+      "bytes": 2894,
+      "sha256": "881f3146bbe1055af1929ff0f52eb2347c8829f512b42ff0fe8c419e6b4a0991"
     },
     {
       "path": "docs/Size-Proof.png",
