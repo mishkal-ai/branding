@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+- Document public, exact-revision consumer acquisition and remove the obsolete
+  private-repository credential requirement. This changes no artwork, release
+  version, web distribution or consumer lock.
+
 - Cancel superseded CI runs within the same pull request and add a provisional
   10-minute `brand-kit` timeout. Keep all checks and `main` runs; document usage
   reporting and regenerate the full inventory without changing brand assets,
@@ -28,7 +32,7 @@
 - Separate semantic design tokens from optional local `@font-face`
   declarations.
 - Correct the canonical PDF and identity-preview filenames.
-- Add repository guidance, automated verification, and a proposed private-repo
+- Add repository guidance, automated verification, and a proposed repository
   `main` protection payload.
 
 ## 1.0.0 - 2026-09-19

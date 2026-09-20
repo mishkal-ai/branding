@@ -83,7 +83,9 @@ still changes the lock revision even when its manifest checksum is identical.
 ## Consumer-local CI
 
 Consumer CI must acquire the locked source from the trusted
-`mishkal-ai/branding` repository using normal read-only repository credentials.
+public `mishkal-ai/branding` repository. GitHub Actions may use its ephemeral
+`github.token`; no dedicated cross-repository credential is required. Anonymous
+Git acquisition is also supported outside Actions.
 Read `revision` from the committed consumer lock, require a full lowercase
 40- or 64-character hexadecimal commit, and check out that exact commit in a
 separate Branding directory in detached-HEAD mode. Do not use an unpinned

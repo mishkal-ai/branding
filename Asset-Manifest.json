@@ -62,8 +62,8 @@
     },
     {
       "path": "CHANGELOG.md",
-      "bytes": 1781,
-      "sha256": "404f9918aebf22a7cd33465b88eae7ab06ee3a03136b231308df5cbb7bae3468"
+      "bytes": 1983,
+      "sha256": "96f9a0d89d72819535a3f3eb292ed7cf33bf6b2c39decc22f8f973ab24ea41c9"
     },
     {
       "path": "Mishkal-Brand-Guide-v1.pdf",
@@ -77,8 +77,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 7684,
-      "sha256": "2593c7fe543ee60bd2ed317c4706e176323771288fab7209af27a03a5f725f29"
+      "bytes": 7923,
+      "sha256": "63b09bd6768d1586aa534f973f48c1a84e60ce936358ee253ddee5f112af474a"
     },
     {
       "path": "Web-Distribution.json",
@@ -92,8 +92,8 @@
     },
     {
       "path": "docs/Distribution.md",
-      "bytes": 7380,
-      "sha256": "a59e576294951d94c06bc91777286f3cc0d0d6a980465c0297ff66add2220114"
+      "bytes": 7509,
+      "sha256": "abf4ad51131c9a7b9e54440d9d5f3340d4cc73cbf4c028a7b32b0d08b133ed1c"
     },
     {
       "path": "docs/Implementation.md",
@@ -102,8 +102,8 @@
     },
     {
       "path": "docs/Repository.md",
-      "bytes": 2894,
-      "sha256": "881f3146bbe1055af1929ff0f52eb2347c8829f512b42ff0fe8c419e6b4a0991"
+      "bytes": 2893,
+      "sha256": "4f633f912c7c774f90b7a0fc9bf0fcd0b6faf98ce809cda97f0d6fdcc5bbf40d"
     },
     {
       "path": "docs/Size-Proof.png",
