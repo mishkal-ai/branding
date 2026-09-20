@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+- Cancel superseded CI runs within the same pull request and add a provisional
+  10-minute `brand-kit` timeout. Keep all checks and `main` runs; document usage
+  reporting and regenerate the full inventory without changing brand assets,
+  release version or the web distribution.
+
 - Align standalone triage, review, task publication and documentation gates with
   the six-repository workflow; clarify Branding and frontend ownership and
   managed Codex configuration. Artwork, version and web distribution are unchanged.

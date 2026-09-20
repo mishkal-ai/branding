@@ -21,6 +21,15 @@ The GitHub Actions workflow runs source/manifests checks and distribution tests
 for pull requests and pushes to `main`, using read-only repository permissions.
 Its required check name is `brand-kit`.
 
+A new run cancels older runs of this workflow for the same pull request. Other
+PRs and every `main` run remain independent, and all source/manifest/tests still
+run. The job has a provisional 10-minute timeout with ample headroom over local
+verification; hosted duration must be checked on the first completed hosted run.
+Local timings do not include hosted checkout/setup time. There are no path
+exemptions: documentation and workflow files belong to the full asset manifest.
+See [CI execution and usage policy](../../bknd/docs/agent-workflow.md#ci-execution-and-usage-policy)
+for publication cadence, billing blockers and read-only usage reporting.
+
 `.github/main-protection.json` is a GitHub branch-protection API payload for this
 private repository. It requires the current CI check, an up-to-date branch, one
 approving review from someone other than the last pusher, resolved conversations,
