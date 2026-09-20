@@ -12,6 +12,12 @@ Production artwork based on the selected **A1.2 / Light** direction: Portfolio W
 
 All logo lettering is outlined. You do not need to install a font to use or edit the logos. SVG files contain editable paths, not embedded images. Keep the supplied proportions and viewBox.
 
+For repository work, read [AGENTS.md](AGENTS.md) and
+[repository controls](docs/Repository.md). Branding owns approved identity; Website
+and Webapp own their compositions. The shared frontend role serves explicitly
+assigned consumers, while Branding has an explicitly bounded writer. A consumer
+upgrade follows the distribution contract and its own registered task.
+
 ## Assets
 
 | Folder or file | Contents |

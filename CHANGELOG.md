@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+- Align standalone triage, review, task publication and documentation gates with
+  the six-repository workflow; clarify Branding and frontend ownership and
+  managed Codex configuration. Artwork, version and web distribution are unchanged.
+
 ## 1.1.0 - 2026-09-20
 
 - Adopt the approved transparent Mishkal Teal browser favicons from webapp

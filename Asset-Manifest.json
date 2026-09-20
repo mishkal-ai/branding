@@ -6,6 +6,41 @@
   "selfHash": false,
   "files": [
     {
+      "path": ".codex/agents/mishkal_backend.toml",
+      "bytes": 3701,
+      "sha256": "4cf20d247f66a6e9888c2087c0aa5e35ec86f1573de071bf89947fa9e0b09847"
+    },
+    {
+      "path": ".codex/agents/mishkal_profiles.toml",
+      "bytes": 3745,
+      "sha256": "ac230ec5d93236e52fc86d08117b6c967b9bfc66bf051e1e3b1d8ff83453c3ac"
+    },
+    {
+      "path": ".codex/agents/mishkal_reviewer.toml",
+      "bytes": 3166,
+      "sha256": "e26717a49baf6bd72b3007a93a1832564e0072b78b1764341259c98847d593e9"
+    },
+    {
+      "path": ".codex/agents/mishkal_terminal.toml",
+      "bytes": 3483,
+      "sha256": "b63be8aef49dec40ac8c874331a6b05a014326055375abf80c57c79492a10182"
+    },
+    {
+      "path": ".codex/agents/mishkal_triage.toml",
+      "bytes": 2357,
+      "sha256": "ecba060e22c493ac4fb119214ca5ed8cb3189cea809da80f5fc015aad813b94c"
+    },
+    {
+      "path": ".codex/agents/mishkal_webapp.toml",
+      "bytes": 5511,
+      "sha256": "2926f5e8161d66640e8b2965de2e7b69148636ac7a1fc606b0304d7ff728ad87"
+    },
+    {
+      "path": ".codex/config.toml",
+      "bytes": 280,
+      "sha256": "82316c19dd1eea8d7920a2ead10ef69dafd2ba0cff62b9ce54640994c5ce3354"
+    },
+    {
       "path": ".github/main-protection.json",
       "bytes": 570,
       "sha256": "e921f6d701c39e79feb6203a134588d529911f6562346d007e1f1116177bfe6a"
@@ -22,13 +57,13 @@
     },
     {
       "path": "AGENTS.md",
-      "bytes": 1824,
-      "sha256": "4e79c5317de98bd4925c3283c28831350345e08ef9cb6df4c22f3669d091e313"
+      "bytes": 8177,
+      "sha256": "b94f18828eb435ce32ead5ce4de7d75c206c561d899f168c7d5be8c1a7763e8c"
     },
     {
       "path": "CHANGELOG.md",
-      "bytes": 1244,
-      "sha256": "166c44a33d4a34c70c246de6ffa725c262359b09bd947a5bf11e2dcd40ceb45b"
+      "bytes": 1500,
+      "sha256": "bef19e06aedb4c384673d093ddfb8b00afad1fa7537e51ed74ff1a6bc7e72c38"
     },
     {
       "path": "Mishkal-Brand-Guide-v1.pdf",
@@ -42,8 +77,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 7082,
-      "sha256": "8d2a0ca5071da19bf96ee5407879a2227c773bb7af5af6e1987d0f074224efb2"
+      "bytes": 7449,
+      "sha256": "c85084b2e58b440a048fe3f901ea4ada143b49d60d4d9cb60f6fde9b51bff2f5"
     },
     {
       "path": "Web-Distribution.json",
@@ -57,8 +92,8 @@
     },
     {
       "path": "docs/Distribution.md",
-      "bytes": 6817,
-      "sha256": "5a886c3f444b39bd0a0b0ea031d7ba2f3a7a944cb5f208aaae963d0863d53dea"
+      "bytes": 7380,
+      "sha256": "a59e576294951d94c06bc91777286f3cc0d0d6a980465c0297ff66add2220114"
     },
     {
       "path": "docs/Implementation.md",
@@ -67,8 +102,8 @@
     },
     {
       "path": "docs/Repository.md",
-      "bytes": 1024,
-      "sha256": "5fc891c4932b109229ff1e02c185f3c3f374d2839deb1b9e64990dde54a87ff6"
+      "bytes": 2243,
+      "sha256": "831bd4431441c3b5310a0c22b366a7c07102f43b9922b407dbcce8e8f7dcd055"
     },
     {
       "path": "docs/Size-Proof.png",
