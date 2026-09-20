@@ -19,6 +19,14 @@ version; compatible corrections use a patch version. Release `1.1.0` is named
 corrections require a new version. The lock records the version without the `v`
 prefix and binds the full commit, not a mutable branch or tag name.
 
+Unreleased governance-only maintenance may update repository guides and managed
+agent configuration without changing `RELEASE_VERSION`, artwork or the approved
+`Web-Distribution.json` bytes. Record it under Unreleased and regenerate the full
+`Asset-Manifest.json` inventory, then run the same required source checks. Such a
+commit is not a new brand release or an instruction to repoint a consumer lock.
+Do not retag an existing version, create a release or sync consumers as part of
+that maintenance; actual release/consumer changes follow the procedure below.
+
 1. Make approved changes and update `RELEASE_VERSION`, the allowlist and current
    documentation in the same task.
 2. Run `python3 scripts/brand_distribution.py generate` after all source,
