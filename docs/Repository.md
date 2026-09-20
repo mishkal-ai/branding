@@ -31,7 +31,7 @@ See [CI execution and usage policy](../../bknd/docs/agent-workflow.md#ci-executi
 for publication cadence, billing blockers and read-only usage reporting.
 
 `.github/main-protection.json` is a GitHub branch-protection API payload for this
-private repository. It requires the current CI check, an up-to-date branch, one
+public repository. It requires the current CI check, an up-to-date branch, one
 approving review from someone other than the last pusher, resolved conversations,
 linear history, and administrator enforcement. Force pushes and branch deletion
 are disabled. It grants no repository access.

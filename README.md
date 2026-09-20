@@ -21,6 +21,9 @@ upgrade follows the distribution contract and its own registered task.
 CI cancels superseded runs of the same pull request and bounds `brand-kit` to
 10 minutes. Every source, manifest and distribution check remains enabled;
 see [repository controls](docs/Repository.md) for scope and verification limits.
+The repository is public so locked consumer builds can acquire an exact release
+revision without a dedicated cross-repository secret. Consumers still validate
+the committed lock and assets; public access does not replace integrity checks.
 
 ## Assets
 
