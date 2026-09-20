@@ -1,25 +1,4 @@
-/* mishkal identity 1.0. The logo itself uses SVG paths, not these fonts. */
-@font-face {
-  font-family: 'Manrope';
-  src: url('./fonts/Manrope-Variable.ttf') format('truetype');
-  font-weight: 200 800;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'IBM Plex Mono';
-  src: url('./fonts/IBMPlexMono-Regular.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'IBM Plex Mono';
-  src: url('./fonts/IBMPlexMono-Medium.ttf') format('truetype');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
+/* Mishkal identity 1.1 semantic tokens. No font files are loaded by this file. */
 :root {
   --mishkal-teal: #007f78;
   --mishkal-ink: #10252b;

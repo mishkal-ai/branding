@@ -1,7 +1,35 @@
 {
+  "schemaVersion": 1,
   "name": "mishkal brand kit",
-  "version": "1.0",
+  "version": "1.1.0",
+  "order": "path (ascending Unicode code point order)",
+  "selfHash": false,
   "files": [
+    {
+      "path": ".github/main-protection.json",
+      "bytes": 570,
+      "sha256": "e921f6d701c39e79feb6203a134588d529911f6562346d007e1f1116177bfe6a"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "bytes": 480,
+      "sha256": "89d4801888911226893a22f4722a763c6f00659d94100abaf026a858dac27969"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 38,
+      "sha256": "599e8d09a18b6bac6f70ed12bf96f67e49c4d992ee2601bc173d92fbcb64b11d"
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 1824,
+      "sha256": "4e79c5317de98bd4925c3283c28831350345e08ef9cb6df4c22f3669d091e313"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "bytes": 1244,
+      "sha256": "166c44a33d4a34c70c246de6ffa725c262359b09bd947a5bf11e2dcd40ceb45b"
+    },
     {
       "path": "Mishkal-Brand-Guide-v1.pdf",
       "bytes": 67333,
@@ -14,18 +42,33 @@
     },
     {
       "path": "README.md",
-      "bytes": 4877,
-      "sha256": "17ada6a7d7c0f3c457f3899654683bdfcfd747b3b971a5938063a5e29564d50f"
+      "bytes": 7082,
+      "sha256": "8d2a0ca5071da19bf96ee5407879a2227c773bb7af5af6e1987d0f074224efb2"
+    },
+    {
+      "path": "Web-Distribution.json",
+      "bytes": 6725,
+      "sha256": "db853db68195a17c80ab876b3a9f696cc595e7475de28ae5e62fdbe81f81460f"
     },
     {
       "path": "brand-tokens.css",
-      "bytes": 1271,
-      "sha256": "03224f26b9734e8df3acdf501bba7a2384e9dcd9ae5354b13813c7fab5e99bd8"
+      "bytes": 752,
+      "sha256": "4558c9f0dbda626a7213db1b1f26ecb9e9f6b8ce7584044bf1490c570aeb2457"
+    },
+    {
+      "path": "docs/Distribution.md",
+      "bytes": 6817,
+      "sha256": "5a886c3f444b39bd0a0b0ea031d7ba2f3a7a944cb5f208aaae963d0863d53dea"
     },
     {
       "path": "docs/Implementation.md",
-      "bytes": 2495,
-      "sha256": "eb470363341c94651c45e1bc1810139b7a07c5828ffe47a2525d13718f0258cc"
+      "bytes": 4007,
+      "sha256": "a2f4ab7718b35bdd5b9c9d06a4d8fc19226129dd180b0831c9e66f208ac4bb44"
+    },
+    {
+      "path": "docs/Repository.md",
+      "bytes": 1024,
+      "sha256": "5fc891c4932b109229ff1e02c185f3c3f374d2839deb1b9e64990dde54a87ff6"
     },
     {
       "path": "docs/Size-Proof.png",
@@ -34,8 +77,13 @@
     },
     {
       "path": "docs/Verification.md",
-      "bytes": 1464,
-      "sha256": "3af6800908ad5d2ca3d7a145c72f81a8534193a92e83cb869df7c5244ad6a5a8"
+      "bytes": 2881,
+      "sha256": "e176c2820c546efb58b3f27a3db12490b140fac0d2a5c7490c0cfd3b8c5b42b4"
+    },
+    {
+      "path": "font-faces.css",
+      "bytes": 610,
+      "sha256": "4923375003578def42d4769fc4e70f553f4b05604e508a6426b7c9459264cbdf"
     },
     {
       "path": "fonts/IBMPlexMono-Medium.ttf",
@@ -69,13 +117,13 @@
     },
     {
       "path": "icons/favicon.ico",
-      "bytes": 3680,
-      "sha256": "6bfee4cc3234d2f6d600e6fe268a27a6c707b950232f9d574426587b9c3e3591"
+      "bytes": 15086,
+      "sha256": "a88bcade16ef489d5754463c6c813a55c2b3dc87a6741dcf37d72e88f1acc580"
     },
     {
       "path": "icons/favicon.svg",
-      "bytes": 1105,
-      "sha256": "1dd8272891d003447017e81d01c767d3bb34b1ac3cc986902cfc02998bff80b8"
+      "bytes": 1057,
+      "sha256": "c52be55308087333fe1d232c5c19559f43bf3191bb0295fe1a3af67aeff73219"
     },
     {
       "path": "icons/mishkal-app-icon.svg",
@@ -248,6 +296,11 @@
       "sha256": "d017a0e0d012bb6ec7161532fd7546a0f18d7a8d99d67e9e06ce5640e738c6ec"
     },
     {
+      "path": "scripts/brand_distribution.py",
+      "bytes": 18406,
+      "sha256": "d18e5a3897959f285d647c7a3b6c54dcaf5287bcaee6bb4e4da5e2c159085cb7"
+    },
+    {
       "path": "svg/mishkal-horizontal-black.svg",
       "bytes": 3893,
       "sha256": "4d69a44966b8c3082f1f747dc78b49681968047b8fcb26a279d9cbe93962bfb6"
@@ -356,6 +409,11 @@
       "path": "svg/mishkal-wordmark-white.svg",
       "bytes": 2957,
       "sha256": "53fd92dab5e1debfa8d1c1ed83adac190542452a22a13ffe4853918414dc9f13"
+    },
+    {
+      "path": "tests/test_brand_distribution.py",
+      "bytes": 22699,
+      "sha256": "eef8614abc10e8d61cfde0c68d59cab3924d304a1793020bfb6cebc8df9d6c0e"
     }
   ]
 }
