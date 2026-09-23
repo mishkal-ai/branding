@@ -17,8 +17,8 @@
     },
     {
       "path": ".codex/agents/mishkal_reviewer.toml",
-      "bytes": 3166,
-      "sha256": "e26717a49baf6bd72b3007a93a1832564e0072b78b1764341259c98847d593e9"
+      "bytes": 3337,
+      "sha256": "cf26caaa834e0cce547140c421108167ab33ad955299c66406e737042dd244df"
     },
     {
       "path": ".codex/agents/mishkal_terminal.toml",
@@ -27,8 +27,8 @@
     },
     {
       "path": ".codex/agents/mishkal_triage.toml",
-      "bytes": 2357,
-      "sha256": "ecba060e22c493ac4fb119214ca5ed8cb3189cea809da80f5fc015aad813b94c"
+      "bytes": 2947,
+      "sha256": "304fcfdca78aeece53134ca5a3121a098376f7e5fc4dd28a08dc29209a675880"
     },
     {
       "path": ".codex/agents/mishkal_webapp.toml",
@@ -57,13 +57,13 @@
     },
     {
       "path": "AGENTS.md",
-      "bytes": 8177,
-      "sha256": "b94f18828eb435ce32ead5ce4de7d75c206c561d899f168c7d5be8c1a7763e8c"
+      "bytes": 8874,
+      "sha256": "4bc47ce0260ba3d2d4ddb67ec481344f44bcfd773afa3d7bbe3fa1c3656f926b"
     },
     {
       "path": "CHANGELOG.md",
-      "bytes": 1983,
-      "sha256": "96f9a0d89d72819535a3f3eb292ed7cf33bf6b2c39decc22f8f973ab24ea41c9"
+      "bytes": 2227,
+      "sha256": "f1c8d698695b602361b36571c436fab7f07fbddb3245ae2a23346e26fa8a374c"
     },
     {
       "path": "Mishkal-Brand-Guide-v1.pdf",
@@ -77,8 +77,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 7923,
-      "sha256": "63b09bd6768d1586aa534f973f48c1a84e60ce936358ee253ddee5f112af474a"
+      "bytes": 7986,
+      "sha256": "313a9bc17dcb35bc2b121f6f6ec4ba8f7ff98d61061e454ec07b02f18ab0eddd"
     },
     {
       "path": "Web-Distribution.json",
@@ -102,8 +102,8 @@
     },
     {
       "path": "docs/Repository.md",
-      "bytes": 2893,
-      "sha256": "4f633f912c7c774f90b7a0fc9bf0fcd0b6faf98ce809cda97f0d6fdcc5bbf40d"
+      "bytes": 3049,
+      "sha256": "5c299dc01fc7b4dbbc53e6550f17f68955c21226974f613d00c3cf0a2770c9e1"
     },
     {
       "path": "docs/Size-Proof.png",
