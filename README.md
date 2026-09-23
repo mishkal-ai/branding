@@ -19,9 +19,11 @@ and Webapp own their compositions. The shared frontend role serves explicitly
 assigned consumers, while Branding has an explicitly bounded writer. A consumer
 upgrade follows the distribution contract and its own registered task.
 
-CI cancels superseded runs of the same pull request and bounds `brand-kit` to
-10 minutes. Every source, manifest and distribution check remains enabled;
-see [repository controls](docs/Repository.md) for scope and verification limits.
+The coordinator runs the complete `brand-kit` checks locally using Python 3.12:
+manifest freshness, source validation and distribution-tool tests. The fixed
+[policy](.github/local-checks.json) replaces GitHub Actions with clean-commit evidence;
+see [repository controls](docs/Repository.md) for commands and transition requirements.
+These are asset integrity/tooling checks, not visual design approval.
 The repository is public so locked consumer builds can acquire an exact release
 revision without a dedicated cross-repository secret. Consumers still validate
 the committed lock and assets; public access does not replace integrity checks.
@@ -89,7 +91,7 @@ python3 scripts/brand_distribution.py check-consumer --consumer-root ../webapp
 
 These consumer commands require clean, committed Branding source. Sync generates
 the consumer's `brand.lock.json` with version, exact Branding commit and manifest
-checksum. Commit the lock with the assets. Consumer CI acquires that pinned source
+checksum. Commit the lock with the assets. Consumer local verification acquires that pinned source
 and runs read-only `check-consumer`; absent or mismatched locks fail verification.
 See `docs/Distribution.md` for acquisition, versioning and release/upgrade steps.
 
