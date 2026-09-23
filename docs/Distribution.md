@@ -38,7 +38,7 @@ that maintenance; actual release/consumer changes follow the procedure below.
    record its commit and `Web-Distribution.json` SHA-256 in the release notes.
 5. In a separately authorized consumer task, acquire that committed source,
    run `sync`, review the assets and lock diff together, update consumer-owned
-   provenance notes, and run consumer CI before publication. Tagging or release
+   provenance notes, and run the complete consumer local profile before publication. Tagging or release
    publication does not sync or deploy consumers.
 
 Generation writes `Web-Distribution.json` before calculating the full release
@@ -80,12 +80,11 @@ it rejects a symlink or unsupported lock entry before any asset writes. Review
 the version, revision, checksum and asset changes together. An empty new commit
 still changes the lock revision even when its manifest checksum is identical.
 
-## Consumer-local CI
+## Consumer-local verification
 
-Consumer CI must acquire the locked source from the trusted
-public `mishkal-ai/branding` repository. GitHub Actions may use its ephemeral
-`github.token`; no dedicated cross-repository credential is required. Anonymous
-Git acquisition is also supported outside Actions.
+Consumer local verification must acquire the locked source from the trusted
+public `mishkal-ai/branding` repository through anonymous Git acquisition;
+no dedicated cross-repository credential or Actions run is required.
 Read `revision` from the committed consumer lock, require a full lowercase
 40- or 64-character hexadecimal commit, and check out that exact commit in a
 separate Branding directory in detached-HEAD mode. Do not use an unpinned
@@ -99,22 +98,22 @@ From the consumer root, with that checkout supplied as `BRANDING_ROOT`:
 python3 "$BRANDING_ROOT/scripts/brand_distribution.py" check-consumer --consumer-root .
 ```
 
-This invocation is read-only in the consumer and requires no consumer sync in CI.
+This invocation is read-only in the consumer and requires no consumer sync during verification.
 The checker independently verifies the source's clean committed bytes, matches
 the lock's exact commit/version/manifest checksum, then verifies every managed
 asset and the topology. A provided source checkout at a different commit fails
-even if the assets happen to match. A missing lock fails; CI must not repair it
+even if the assets happen to match. A missing lock fails; verification must not repair it
 by running sync. Acquiring the source requires Git repository access; verification
 itself uses only Python's standard library and local Git, with no network access.
 
-For example, a CI acquisition step may validate the lock revision before passing
-it as the `ref` input of its trusted checkout action:
+For example, the local acquisition step validates the lock revision before
+checking out that exact commit from the fixed trusted repository:
 
 ```sh
 python3 -c 'import json, re; lock = json.load(open("brand.lock.json")); revision = lock["revision"]; assert isinstance(revision, str) and re.fullmatch(r"[0-9a-f]{40}|[0-9a-f]{64}", revision); print(revision)'
 ```
 
-The checkout repository is fixed in CI configuration; never derive a clone URL
+The checkout repository is fixed in the consumer verification configuration; never derive a clone URL
 or executable path from lock contents. Review lock updates as dependency upgrades.
 
 ## Filesystem safety

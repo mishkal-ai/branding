@@ -19,28 +19,29 @@ manifest after tracked governance/configuration changes, then run all required
 [checks](../AGENTS.md#required-checks). Consumer updates remain separately scoped
 under [Distribution](Distribution.md); source integration is not deployed evidence.
 
-The GitHub Actions workflow runs source/manifests checks and distribution tests
-for pull requests and pushes to `main`, using read-only repository permissions.
-Its required check name is `brand-kit`.
+The coordinator runs the complete fixed `branding-python312-v1` profile through
+[Branding local verification](../../bknd/docs/agent-workflow.md#branding-local-verification).
+It uses Python 3.12 for manifest freshness, source validation and all distribution
+unit tests. Missing prerequisites or failed/incomplete/stale evidence blocks READY.
+All source/docs must be committed before this check; regenerate the full manifest
+after tracked governance changes. No documentation-only exemption applies.
 
-A new run cancels older runs of this workflow for the same pull request. Other
-PRs and every `main` run remain independent, and all source/manifest/tests still
-run. The job has a provisional 10-minute timeout with ample headroom over local
-verification; hosted duration must be checked on the first completed hosted run.
-Local timings do not include hosted checkout/setup time. There are no path
-exemptions: documentation and workflow files belong to the full asset manifest.
-See [CI execution and usage policy](../../bknd/docs/agent-workflow.md#ci-execution-and-usage-policy)
-for publication cadence, billing blockers and read-only usage reporting.
+The `brand-kit` Actions job is removed. Merge the Backend profile support before
+this companion retirement. There is no automatic PR or post-merge hosted run;
+local logs/evidence remain in the repository Git common directory. These checks
+validate asset inventory and tooling, not design quality, deployed consumer assets
+or GitHub-enforced merge rules.
 
 `.github/main-protection.json` is a GitHub branch-protection API payload for this
-public repository. It requires the current CI check, an up-to-date branch, one
-approving review from someone other than the last pusher, resolved conversations,
+public repository. Its `required_status_checks: null` removes the retired hosted requirement;
+there is no status-based up-to-date-branch requirement. It retains one approving review from someone other than the last pusher, resolved conversations,
 linear history, and administrator enforcement. Force pushes and branch deletion
 are disabled. It grants no repository access.
 
 Applying it changes remote policy and is intentionally not part of source
 verification. An authorized administrator may apply it only after confirming
-the repository, default branch, plan-supported features, and check name:
+the repository, default branch, plan-supported features, existing settings and
+completed local-profile transition. Do not overwrite newer remote controls:
 
 ```sh
 gh api --method PUT \
@@ -49,3 +50,8 @@ gh api --method PUT \
 ```
 
 Presence of the payload does not prove that remote protection is configured.
+
+On 2026-09-23, querying live Branding branch protection returned HTTP 404. Live
+protection is therefore unverified; no remote settings were changed. Before manual
+merge, reconcile obsolete hosted requirements if remote rules actually enforce them.
+A template in Git neither applies policy nor reports local results to GitHub.

@@ -41,14 +41,14 @@
       "sha256": "82316c19dd1eea8d7920a2ead10ef69dafd2ba0cff62b9ce54640994c5ce3354"
     },
     {
-      "path": ".github/main-protection.json",
-      "bytes": 570,
-      "sha256": "e921f6d701c39e79feb6203a134588d529911f6562346d007e1f1116177bfe6a"
+      "path": ".github/local-checks.json",
+      "bytes": 57,
+      "sha256": "45717c13e8bf106b490b747a1cae807c77c8f6472bfb045c79682b1a2cf50524"
     },
     {
-      "path": ".github/workflows/ci.yml",
-      "bytes": 763,
-      "sha256": "629cccb1ac6a4da58982ca651e1d49aea10442005705a27d70437a802956170f"
+      "path": ".github/main-protection.json",
+      "bytes": 507,
+      "sha256": "865b76937a1fe56cda09717e47f10fdcc69d10113a643ab9ebe5dac63fb3d690"
     },
     {
       "path": ".gitignore",
@@ -57,13 +57,13 @@
     },
     {
       "path": "AGENTS.md",
-      "bytes": 8874,
-      "sha256": "4bc47ce0260ba3d2d4ddb67ec481344f44bcfd773afa3d7bbe3fa1c3656f926b"
+      "bytes": 9349,
+      "sha256": "cbfb3dcb4a4a5ddba7270f3441e508c3774d02302a91555f57925f4f63c4e332"
     },
     {
       "path": "CHANGELOG.md",
-      "bytes": 2227,
-      "sha256": "f1c8d698695b602361b36571c436fab7f07fbddb3245ae2a23346e26fa8a374c"
+      "bytes": 2616,
+      "sha256": "48a03a3f77feec27c4a5ff4019db83244309ac2a58641b07c50daf5cbf725b1a"
     },
     {
       "path": "Mishkal-Brand-Guide-v1.pdf",
@@ -77,8 +77,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 7986,
-      "sha256": "313a9bc17dcb35bc2b121f6f6ec4ba8f7ff98d61061e454ec07b02f18ab0eddd"
+      "bytes": 8171,
+      "sha256": "37d9b673b8cd7219648d8071d5d571c43b819f459500c18a8100749f7a8eb90d"
     },
     {
       "path": "Web-Distribution.json",
@@ -92,8 +92,8 @@
     },
     {
       "path": "docs/Distribution.md",
-      "bytes": 7509,
-      "sha256": "abf4ad51131c9a7b9e54440d9d5f3340d4cc73cbf4c028a7b32b0d08b133ed1c"
+      "bytes": 7547,
+      "sha256": "2ca197dd2687e8e6126f24568dde98b86e1d8076ccbbed3546b23f237fe5bc0e"
     },
     {
       "path": "docs/Implementation.md",
@@ -102,8 +102,8 @@
     },
     {
       "path": "docs/Repository.md",
-      "bytes": 3049,
-      "sha256": "5c299dc01fc7b4dbbc53e6550f17f68955c21226974f613d00c3cf0a2770c9e1"
+      "bytes": 3546,
+      "sha256": "43adb6afdc15cb4bb92e4e695bfb3ae9db8bc882144fb249eb4bef5b32564b81"
     },
     {
       "path": "docs/Size-Proof.png",

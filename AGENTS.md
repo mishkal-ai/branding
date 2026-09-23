@@ -29,6 +29,13 @@ is not automatically loaded in a standalone clone.
 
 ## Required checks
 
+Before task readiness, the coordinator runs the fixed Python 3.12
+[Branding local profile](../bknd/docs/agent-workflow.md#branding-local-verification)
+with `verify-local --repo branding` at the final clean committed task HEAD.
+It executes all three commands below and records generated identity-bound evidence;
+manual command output or tested notes cannot replace it. GitHub Actions is retired.
+Manifest/source checks do not establish visual approval or a consumer release.
+
 ```sh
 python3 scripts/brand_distribution.py generate --check
 python3 scripts/brand_distribution.py check-source

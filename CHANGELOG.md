@@ -2,6 +2,12 @@
 
 ## Unreleased
 
+- Replace `brand-kit` GitHub Actions with coordinator-run Python 3.12 manifest,
+  source and distribution checks at the final clean task commit. Preserve review
+  and other protection-template controls; remote configuration is separate.
+  Regenerate governance inventory without changing artwork, version, web
+  distribution or consumer locks. This supersedes the hosted CI policy below.
+
 - Synchronize the reviewer xhigh trial and conditional complex-triage guidance;
   retain explicit approved models and reviewed future upgrades. Regenerate the
   governance inventory without changing brand version, artwork or web distribution.
