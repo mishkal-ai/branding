@@ -1,6 +1,6 @@
 # Branding repository agent guide
 
-This repository owns Mishkal visual source assets, distribution metadata and
+This repository owns PHIOON visual source assets, distribution metadata and
 brand guidance. It does not own application behavior, deployment, or consumer
 layout decisions. Current user scope governs; this guide does not authorize
 tagging, merging, deployment, or changes in consumer repositories. Authorized
@@ -13,12 +13,16 @@ is not automatically loaded in a standalone clone.
 
 - Preserve approved artwork geometry, clear-space frames, palette roles and
   installed-app icon treatment. Do not redraw assets without explicit approval.
-- Keep browser favicons distinct from installed-app icons: the browser favicon
-  is Mishkal Teal on transparency; app and touch icons are white on Deep Navy.
+- Preserve the supplied PHIOON browser favicon, app and touch icon treatment:
+  white symbol on Deep Navy. This deliberately supersedes the transparent
+  Mishkal Teal favicon in distribution 1.1.0.
 - Keep `brand-tokens.css` side-effect free. Optional local font loading belongs
   in `font-faces.css` and consumers may choose their own loading mechanism.
 - Change the web allowlist in `scripts/brand_distribution.py` deliberately.
   Consumer paths are a contract; coordinate their changes with every consumer.
+- Distribution 2.0.0 uses PHIOON filenames/tokens and visual identity 1.0.
+  The frozen 1.1.0 manifest grants only checksum-verified retirement of its old
+  managed filenames during sync. Never broaden it to delete unknown files.
 - Regenerate both manifests after release-file changes, then run the complete
   verification commands below. `Asset-Manifest.json` intentionally excludes
   itself, and `Web-Distribution.json` is not self-hashed.

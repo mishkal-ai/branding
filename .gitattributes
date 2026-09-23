@@ -1,0 +1,2 @@
+# Brand guides are immutable binary artifacts; never text-diff or normalize them.
+*.pdf binary

@@ -1,44 +1,46 @@
-# Production verification
+# Verification record: PHIOON identity 1.0 / distribution 2.0.0
 
-Verified 20 September 2026 for release 1.1.0.
+23 September 2026. The artwork checks below are the supplied identity author's
+record, preserved from input commit `a2154f5128b3715162a61d1ebc78b11c44d55c71`;
+they are not a claim that release tooling re-rendered the PDF or repeated the
+author's visual approval.
 
-- 22 SVG masters parse successfully and use editable vector outlines, with no embedded raster images or live text/font dependency.
-- 22 PNG exports checked for expected widths. Transparent versions have alpha transparency; background versions are explicitly named.
-- All 10 square installed-app icons retain their original white-on-Navy files.
-  The transparent teal SVG and ICO browser favicons match the exact blobs from
-  webapp revision `65f7a3374e3b60c326692a6d05a680eff38a5a36`.
-- Web manifest icon references resolve within the kit.
-- The 11-page PDF was rendered and visually reviewed for spacing, legibility and clipping. Text remains extractable.
-- Logo and wordmark size studies reviewed on light and dark backgrounds. See `Size-Proof.png` at actual pixel size. Recommended minimums are documented in the guide.
-- Text contrast calculated with the WCAG relative-luminance method: ink/paper 14.43:1; slate/paper 5.49:1; text teal/paper 5.64:1; aqua/navy 9.58:1. Deep teal/paper is 4.43:1 and is reserved for the logo and suitable large accents, not small text.
-- Original supporting-font license files are bundled.
-- Both manifests are deterministic and omit their own hash where necessary to
-  avoid a self-hash cycle. Tests cover manifest consistency, font licenses, sync
-  idempotency and modification-time preservation, missing/tampered file repair,
-  and rejection of extra files/directories without extra-directory traversal.
-  Snapshot regressions verify an unchanged consumer tree for links to consumer
-  `SOURCE.md`, approved files and external targets; internal/external directory
-  links; dangling, matching-byte and extra links; root links through both the
-  API and CLI; misplaced/unsupported entries; and late invalid manifest paths.
-- Lock tests cover deterministic version/commit/manifest identity, missing or
-  malformed/stale/mismatched locks, lock topology, lock mtime preservation and
-  explicit upgrades. Isolated temporary Git repositories exercise committed CLI
-  sync/check, revision mismatches, and dirty/staged/untracked/status-hidden source
-  rejection. Topology tests mock only source-revision validation so pending work
-  can be checked without claiming it is a published source commit.
+- 22 SVGs parsed successfully. No raster images or live text are embedded in the logo masters.
+- All eight original PHIOON outline path strings are preserved exactly in every word-bearing SVG. Scaling and placement are uniform, without distorting letter proportions.
+- 22 matching PNG exports have the expected dimensions; background-free versions retain alpha transparency.
+- Square icon dimensions verified at all ten supplied sizes. ICO frames match the individual supplied PNGs exactly.
+- Manifest icon paths resolve.
+- The 11-page PDF was rendered and visually reviewed. Text bounds checked; obsolete lowercase, split-k and old logo-size references removed.
+- Horizontal color/white proofs inspected from 160 to 320 px; 220 px chosen as a conservative minimum. Wordmark and stacked proofs inspected at 170 and 220 px. Optical symbol proofs inspected from 16 px.
+- Font licenses retained from the prior kit.
 
-## Reproduce
+These checks cover supplied digital artwork, not deployment in the live site, physical printing, signage, embroidery or platform-specific app-store masking.
+
+## Distribution verification
+
+The release retains the supplied SVG, PNG, icon, font, geometry and PDF bytes.
+The browser favicon intentionally uses the supplied white-on-Deep-Navy design.
+Semantic tokens have no font-loading side effects; optional local font loading
+remains in `font-faces.css`. All fonts and matching SIL licenses are present
+outside the legacy archive. The generated manifests identify distribution
+2.0.0 and visual identity 1.0.
+
+Run after all source/docs/test changes:
 
 ```sh
+python3 scripts/brand_distribution.py generate
 python3 scripts/brand_distribution.py generate --check
 python3 scripts/brand_distribution.py check-source
 python3 -m unittest discover -s tests -v
 ```
 
-## Limits
+Tests cover deterministic manifests, licensed fonts, side-effect-free tokens,
+idempotent sync, exact committed locks, read-only checking, legacy filename
+retirement and refusal of modified/unknown legacy entries, symlinks and invalid
+topology before any write. Legacy migration uses a frozen checksummed allowlist,
+never the removed archive folder.
 
-These checks cover the supplied artifacts and temporary consumer trees. They do
-not establish a real consumer sync, deployed state, browser cache state,
-physical print, embroidery, signage, app-store-specific masking, or live-product
-rendering. Print color and minimum sizes require a physical proof on the intended
-process and material. The optional tagline and editorial examples are proposals.
+Before READY, the coordinator must run the fixed Python 3.12 local profile at
+the clean committed final task HEAD as described in [Repository](Repository.md).
+Manual development checks do not replace that identity-bound evidence.
+Consumer source, build, runtime and deployed-state verification remain separate.

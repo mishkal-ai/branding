@@ -1,73 +1,52 @@
-# Placement notes
+# Placement and implementation
 
-## Web
-
-Use the SVG master in an image element and let its height follow its intrinsic aspect ratio. For example, after placing the kit under `/brand/`:
+For a light header, use the primary SVG at 260 px wide, allowing height to follow its aspect ratio. The minimum full-logo width is 220 px.
 
 ```html
-<a href="/" aria-label="Mishkal home">
-  <img src="/brand/svg/mishkal-horizontal-color.svg"
-       alt="" width="200" style="height:auto" />
+<a href="/" aria-label="PHIOON home">
+  <img src="/brand/svg/phioon-horizontal-color.svg"
+       alt="" width="260" style="height:auto" />
 </a>
 ```
 
-For a dark header use `mishkal-horizontal-white.svg`. The white SVG is transparent; it can appear blank in a viewer with a white canvas. Use the named dark-background version when a visible standalone preview is needed.
+For a dark header, use `phioon-horizontal-white.svg`. Below 220 px available width, switch to the wordmark (minimum 170 px) or symbol. Keep the built-in clear-space frame. The white SVG is transparent and may look blank on a white viewer canvas.
 
-Keep the SVG clear-space frame. Do not crop it away with a negative margin or `object-fit: cover`. If the primary logo has less than 200 px available, switch to the wordmark or symbol asset.
-
-`brand-tokens.css` only declares semantic custom properties; it neither loads
-fonts nor styles product elements. Consumers may load fonts through their own
-framework, or import `font-faces.css` when its relative `fonts/` directory is
-preserved. Font loading is deliberately optional.
-
-## Browser and app icons
+## Browser icons
 
 ```html
 <link rel="icon" href="/brand/icons/favicon.svg" type="image/svg+xml" />
 <link rel="alternate icon" href="/brand/icons/favicon.ico" />
-<link rel="apple-touch-icon" href="/brand/icons/mishkal-icon-180.png" />
+<link rel="apple-touch-icon" href="/brand/icons/phioon-icon-180.png" />
 <link rel="manifest" href="/brand/icons/site.webmanifest" />
 ```
 
-The manifest's icon URLs are relative to the manifest. Browser favicon assets
-use the optically corrected Mishkal Teal symbol on transparency. The square
-installed-app and touch icons remain white on Navy and are declared for `any`
-use, not `maskable`. Add safe-area variants if an app store requires them.
+Manifest icon URLs are relative to the manifest. The square icons are for `any` use; they are not dedicated maskable app-store assets. The 16/24/32 px PNGs use the optical small-size symbol. The ICO retains the exact supplied 16/32/48/64 px frames.
 
-The transparent ICO is the exact browser artifact approved in webapp revision
-`65f7a3374e3b60c326692a6d05a680eff38a5a36`. Browser caches can retain an older
-favicon after deployment; a source check does not establish displayed state.
-
-## Consumer synchronization
-
-The distribution manifest maps source paths to approved webapp locations:
-
-```sh
-python3 scripts/brand_distribution.py sync --consumer-root /path/to/webapp
-python3 scripts/brand_distribution.py check-consumer --consumer-root /path/to/webapp
-```
-
-Sync verifies the source, replaces missing or mismatched approved files
-atomically, skips matching files, writes `brand.lock.json`, and verifies the
-result. Consumer commands require a clean committed Branding checkout; the lock
-binds its version, full commit and exact web-manifest checksum. Commit the lock
-with the assets, and use `check-consumer` from the consumer root in CI with the
-locked Branding source explicitly acquired. See `Distribution.md` for acquisition,
-release and upgrade instructions. It never deletes
-unexpected consumer files; extras in managed directories must be resolved
-explicitly. Before any write, sync validates every manifest path and preflights
-the consumer root, managed destinations, lock and intervening directories. Root or
-managed-path symlinks, unsupported or misplaced entry types, and extras reject
-the whole operation with the consumer tree unchanged. Extra directories are
-not traversed. Matching files retain their modification times. See
-`Distribution.md` for diagnostics and the exclusive-access requirement.
+The supplied browser favicon is white on Deep Navy, matching the PHIOON app
+icon treatment. This release intentionally replaces the transparent teal browser
+favicon from the Mishkal 1.1.0 distribution; do not recreate that older treatment.
 
 ## Editing
 
-Open the SVG in a vector editor. Separate `symbol` and `wordmark` groups and named `letter-*` paths make the geometry accessible. The supplied outlines are the source of truth for the logo. The accompanying Manrope and IBM Plex Mono fonts are for supporting content only.
+Logos contain vector paths with no font or external-image dependency. Keep their proportions. If inserting raw SVG markup multiple times into a document, namespace IDs and title references; using image elements avoids shared ID conflicts.
 
-If embedding SVG markup directly more than once in a document, namespace its IDs or replace the title reference with an appropriate accessible label. Using separate image elements avoids shared ID conflicts.
+Manrope and IBM Plex Mono support the surrounding interface and documents. They
+do not recreate the PHIOON wordmark. Import `brand-tokens.css` for `--phioon-*`
+tokens without font requests. Optional `font-faces.css` uses `./fonts/` relative
+to itself; it is intended for the complete kit layout, not the web distribution.
+Web consumers receive binaries under `app/fonts` and licenses under
+`public/brand/fonts`, and must retain their own font-loading setup.
 
-## Print
+## Consumer migration
 
-Use the vector artwork rather than enlarging a PNG. Use the pure black variant for one-color work. Convert brand colors using the print provider's specified profile, then check a physical proof. No Pantone match, substrate-specific correction or press proof has been established in this kit.
+Use the committed distribution tool, then update consumer references from
+`mishkal-*` assets and `--mishkal-*` tokens to the corresponding `phioon-*` names.
+Update visible names and accessible labels to PHIOON, plus document titles,
+metadata, manifest references, favicon and touch-icon selections. Give full
+horizontal logos at least 220 px; compact slots may use the wordmark at 170 px
+or a standalone symbol. Verify light and dark surfaces and narrow screens.
+Keep operational domains, repository coordinates and persistent identifiers
+unless their own migration is explicitly authorized. See
+[Distribution](Distribution.md) for safe asset retirement and lock validation.
+
+Use vector artwork for print. Convert colors with the print provider’s profile and check a physical proof. Do not infer print readiness from a screen preview.

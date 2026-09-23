@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate, verify, and synchronize the approved Mishkal web distribution."""
+"""Generate, verify, and synchronize the approved PHIOON web distribution."""
 
 from __future__ import annotations
 
@@ -16,13 +16,15 @@ import sys
 import tempfile
 
 
-RELEASE_VERSION = "1.1.0"
+RELEASE_VERSION = "2.0.0"
 SCHEMA_VERSION = 1
 ROOT = Path(__file__).resolve().parents[1]
 ASSET_MANIFEST = ROOT / "Asset-Manifest.json"
 WEB_MANIFEST = ROOT / "Web-Distribution.json"
 CONSUMER_LOCK = "brand.lock.json"
-FAVICON_SOURCE_REVISION = "65f7a3374e3b60c326692a6d05a680eff38a5a36"
+ARTWORK_SOURCE_REVISION = "a2154f5128b3715162a61d1ebc78b11c44d55c71"
+LEGACY_MANIFEST_PATH = "scripts/legacy-web-distribution-1.1.0.json"
+LEGACY_MANIFEST_SHA256 = "db853db68195a17c80ab876b3a9f696cc595e7475de28ae5e62fdbe81f81460f"
 
 # This allowlist is the reviewed web consumer contract. Keep source paths sorted.
 WEB_PATHS = {
@@ -34,25 +36,25 @@ WEB_PATHS = {
     "fonts/Manrope-Variable.ttf": "app/fonts/Manrope-Variable.ttf",
     "icons/favicon.ico": "public/brand/icons/favicon.ico",
     "icons/favicon.svg": "public/brand/icons/favicon.svg",
-    "icons/mishkal-icon-128.png": "public/brand/icons/mishkal-icon-128.png",
-    "icons/mishkal-icon-16.png": "public/brand/icons/mishkal-icon-16.png",
-    "icons/mishkal-icon-180.png": "public/brand/icons/mishkal-icon-180.png",
-    "icons/mishkal-icon-192.png": "public/brand/icons/mishkal-icon-192.png",
-    "icons/mishkal-icon-24.png": "public/brand/icons/mishkal-icon-24.png",
-    "icons/mishkal-icon-256.png": "public/brand/icons/mishkal-icon-256.png",
-    "icons/mishkal-icon-32.png": "public/brand/icons/mishkal-icon-32.png",
-    "icons/mishkal-icon-48.png": "public/brand/icons/mishkal-icon-48.png",
-    "icons/mishkal-icon-512.png": "public/brand/icons/mishkal-icon-512.png",
-    "icons/mishkal-icon-64.png": "public/brand/icons/mishkal-icon-64.png",
+    "icons/phioon-icon-128.png": "public/brand/icons/phioon-icon-128.png",
+    "icons/phioon-icon-16.png": "public/brand/icons/phioon-icon-16.png",
+    "icons/phioon-icon-180.png": "public/brand/icons/phioon-icon-180.png",
+    "icons/phioon-icon-192.png": "public/brand/icons/phioon-icon-192.png",
+    "icons/phioon-icon-24.png": "public/brand/icons/phioon-icon-24.png",
+    "icons/phioon-icon-256.png": "public/brand/icons/phioon-icon-256.png",
+    "icons/phioon-icon-32.png": "public/brand/icons/phioon-icon-32.png",
+    "icons/phioon-icon-48.png": "public/brand/icons/phioon-icon-48.png",
+    "icons/phioon-icon-512.png": "public/brand/icons/phioon-icon-512.png",
+    "icons/phioon-icon-64.png": "public/brand/icons/phioon-icon-64.png",
     "icons/site.webmanifest": "public/brand/icons/site.webmanifest",
-    "svg/mishkal-horizontal-color.svg": "public/brand/svg/mishkal-horizontal-color.svg",
-    "svg/mishkal-horizontal-white.svg": "public/brand/svg/mishkal-horizontal-white.svg",
-    "svg/mishkal-symbol-color.svg": "public/brand/svg/mishkal-symbol-color.svg",
-    "svg/mishkal-symbol-small-color.svg": "public/brand/svg/mishkal-symbol-small-color.svg",
-    "svg/mishkal-symbol-small-white.svg": "public/brand/svg/mishkal-symbol-small-white.svg",
-    "svg/mishkal-symbol-white.svg": "public/brand/svg/mishkal-symbol-white.svg",
-    "svg/mishkal-wordmark-ink.svg": "public/brand/svg/mishkal-wordmark-ink.svg",
-    "svg/mishkal-wordmark-white.svg": "public/brand/svg/mishkal-wordmark-white.svg",
+    "svg/phioon-horizontal-color.svg": "public/brand/svg/phioon-horizontal-color.svg",
+    "svg/phioon-horizontal-white.svg": "public/brand/svg/phioon-horizontal-white.svg",
+    "svg/phioon-symbol-color.svg": "public/brand/svg/phioon-symbol-color.svg",
+    "svg/phioon-symbol-small-color.svg": "public/brand/svg/phioon-symbol-small-color.svg",
+    "svg/phioon-symbol-small-white.svg": "public/brand/svg/phioon-symbol-small-white.svg",
+    "svg/phioon-symbol-white.svg": "public/brand/svg/phioon-symbol-white.svg",
+    "svg/phioon-wordmark-ink.svg": "public/brand/svg/phioon-wordmark-ink.svg",
+    "svg/phioon-wordmark-white.svg": "public/brand/svg/phioon-wordmark-white.svg",
 }
 
 MANAGED_CONSUMER_ROOTS = (
@@ -112,8 +114,9 @@ def _release_paths() -> list[str]:
 def asset_manifest() -> dict:
     return {
         "schemaVersion": SCHEMA_VERSION,
-        "name": "mishkal brand kit",
+        "name": "PHIOON brand kit",
         "version": RELEASE_VERSION,
+        "visualIdentityVersion": "1.0",
         "order": "path (ascending Unicode code point order)",
         "selfHash": False,
         "files": [
@@ -135,17 +138,19 @@ def web_manifest() -> dict:
         )
     return {
         "schemaVersion": SCHEMA_VERSION,
-        "name": "mishkal approved web distribution",
+        "name": "PHIOON approved web distribution",
         "version": RELEASE_VERSION,
+        "visualIdentityVersion": "1.0",
         "order": "path (ascending Unicode code point order)",
         "selfHash": False,
         "provenance": {
             "browserFavicons": {
-                "repository": "mishkal-ai/webapp",
-                "revision": FAVICON_SOURCE_REVISION,
+                "repository": "mishkal-ai/branding",
+                "revision": ARTWORK_SOURCE_REVISION,
+                "treatment": "white optical symbol on Deep Navy",
                 "paths": [
-                    "public/brand/icons/favicon.ico",
-                    "public/brand/icons/favicon.svg",
+                    "icons/favicon.ico",
+                    "icons/favicon.svg",
                 ],
             }
         },
@@ -214,6 +219,8 @@ def check_licenses(manifest: dict) -> None:
 
 def check_source() -> dict:
     generate(check=True)
+    if _digest(ROOT / LEGACY_MANIFEST_PATH)[1] != LEGACY_MANIFEST_SHA256:
+        raise VerificationError("frozen legacy 1.1.0 distribution manifest differs from approved bytes")
     manifest = _read_json(WEB_MANIFEST)
     if manifest != web_manifest():
         raise VerificationError(f"inconsistent manifest: {WEB_MANIFEST.name}")
@@ -349,9 +356,14 @@ def _check_managed_entries(
                     )
 
 
-def _consumer_preflight(consumer_root: Path, manifest: dict) -> tuple[dict, dict]:
+def _consumer_preflight(
+    consumer_root: Path, manifest: dict, *, retired: dict | None = None
+) -> tuple[dict, dict]:
     # Validate the whole contract before inspecting or changing the consumer.
     expected = _consumer_expected(manifest)
+    permitted = {**expected, **(retired or {})}
+    for relative in permitted:
+        _safe_relative(relative)
     managed_roots = manifest["managedConsumerRoots"]
     managed_files = manifest["managedConsumerFiles"]
     for relative in (*managed_roots, *managed_files):
@@ -359,21 +371,53 @@ def _consumer_preflight(consumer_root: Path, manifest: dict) -> tuple[dict, dict
     # Do not resolve the root: that would hide a consumer-root symlink.
     _require_type(consumer_root, ".", directory=True)
     targets = {}
-    for relative in (*expected, *managed_files, CONSUMER_LOCK):
+    for relative in (*permitted, *managed_files, CONSUMER_LOCK):
         target = _consumer_target(consumer_root, relative)
         _require_type(target, relative)
         targets[relative] = target
     allowed_dirs = {
         parent.as_posix()
-        for relative in expected
+        for relative in permitted
         for parent in PurePosixPath(relative).parents
     }
     for relative in managed_roots:
         directory = _consumer_target(consumer_root, relative)
         _require_type(directory, relative, directory=True)
         if directory.exists():
-            _check_managed_entries(consumer_root, directory, set(expected), allowed_dirs)
+            _check_managed_entries(consumer_root, directory, set(permitted), allowed_dirs)
     return expected, targets
+
+
+def _retired_files(manifest: dict) -> dict[str, dict]:
+    """Only the frozen 1.1.0 allowlist grants permission to retire old names."""
+    legacy = _consumer_expected(_read_json(ROOT / LEGACY_MANIFEST_PATH))
+    current = _consumer_expected(manifest)
+    return {path: entry for path, entry in legacy.items() if path not in current}
+
+
+def _retirement_preflight(targets: dict, retired: dict) -> list[Path]:
+    present = [path for path in retired if targets[path].exists()]
+    if not present:
+        return []
+    lock_path = targets[CONSUMER_LOCK]
+    if not lock_path.is_file():
+        raise VerificationError("legacy migration requires a 1.1.0 brand.lock.json")
+    lock = _read_json(lock_path)
+    if not isinstance(lock, dict) or (
+        set(lock) != {"schemaVersion", "repository", "version", "revision", "webDistributionSha256"}
+        or lock.get("schemaVersion") != 1
+        or lock.get("repository") != "mishkal-ai/branding"
+        or lock.get("version") != "1.1.0"
+        or not isinstance(lock.get("revision"), str)
+        or not re.fullmatch(r"[0-9a-f]{40}|[0-9a-f]{64}", lock["revision"])
+        or lock.get("webDistributionSha256") != LEGACY_MANIFEST_SHA256
+    ):
+        raise VerificationError("legacy migration requires the approved 1.1.0 brand.lock.json")
+    for path in present:
+        entry = retired[path]
+        if _digest(targets[path]) != (entry["bytes"], entry["sha256"]):
+            raise VerificationError(f"modified legacy file; preserve and reconcile before migration: {path}")
+    return [targets[path] for path in present]
 
 
 def check_consumer(consumer_root: Path, manifest: dict | None = None) -> None:
@@ -396,7 +440,9 @@ def check_consumer(consumer_root: Path, manifest: dict | None = None) -> None:
 
 def sync_consumer(consumer_root: Path) -> None:
     manifest = check_source()
-    expected, targets = _consumer_preflight(consumer_root, manifest)
+    retired = _retired_files(manifest)
+    expected, targets = _consumer_preflight(consumer_root, manifest, retired=retired)
+    retirement_targets = _retirement_preflight(targets, retired)
     lock_bytes = _json_bytes(consumer_lock(manifest))
 
     for consumer_path, entry in expected.items():
@@ -413,6 +459,8 @@ def sync_consumer(consumer_root: Path) -> None:
         except BaseException:
             Path(temporary).unlink(missing_ok=True)
             raise
+    for target in retirement_targets:
+        target.unlink()
     lock_target = targets[CONSUMER_LOCK]
     if not lock_target.is_file() or lock_target.read_bytes() != lock_bytes:
         _write_atomic(lock_target, lock_bytes)

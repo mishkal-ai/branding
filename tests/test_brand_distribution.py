@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import importlib.util
 import contextlib
+import hashlib
 import io
 import json
 import os
@@ -67,6 +68,110 @@ class BrandDistributionTests(unittest.TestCase):
         self.assertEqual(len(paths), len(set(paths)))
         self.assertFalse(manifest["selfHash"])
         self.assertNotIn("Web-Distribution.json", paths)
+
+    def test_tokens_do_not_load_fonts_and_legacy_contract_is_frozen(self):
+        tokens = (ROOT / "brand-tokens.css").read_text()
+        self.assertNotIn("@font-face", tokens)
+        self.assertNotIn("url(", tokens)
+        self.assertIn("@font-face", (ROOT / "font-faces.css").read_text())
+        retired = distribution._retired_files(distribution.web_manifest())
+        self.assertEqual(len(retired), 18)
+        self.assertTrue(all("/mishkal-" in path for path in retired))
+        self.assertFalse(any("/mishkal-" in path for path in distribution.WEB_PATHS))
+        self.assertEqual(
+            distribution._digest(ROOT / distribution.LEGACY_MANIFEST_PATH)[1],
+            distribution.LEGACY_MANIFEST_SHA256,
+        )
+
+    def legacy_fixture(self, root):
+        retired = distribution._retired_files(distribution.web_manifest())
+        for path, entry in retired.items():
+            target = root / path
+            target.parent.mkdir(parents=True, exist_ok=True)
+            payload = ("legacy fixture: " + path).encode()
+            target.write_bytes(payload)
+            entry["bytes"] = len(payload)
+            entry["sha256"] = hashlib.sha256(payload).hexdigest()
+        lock = {
+            "schemaVersion": 1, "repository": "mishkal-ai/branding", "version": "1.1.0",
+            "revision": "b" * 40,
+            "webDistributionSha256": distribution._digest(ROOT / distribution.LEGACY_MANIFEST_PATH)[1],
+        }
+        (root / distribution.CONSUMER_LOCK).write_bytes(distribution._json_bytes(lock))
+        return retired
+
+    def test_legacy_migration_removes_only_verified_retired_files_and_is_idempotent(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            retired = self.legacy_fixture(root)
+            source_note = root / "public/brand/SOURCE.md"
+            source_note.write_bytes(b"consumer-owned")
+            with mock.patch.object(distribution, "_retired_files", return_value=retired):
+                distribution.sync_consumer(root)
+                distribution.check_consumer(root)
+                before = self.snapshot(root)
+                distribution.sync_consumer(root)
+                self.assertEqual(before, self.snapshot(root))
+            self.assertFalse(any((root / path).exists() for path in retired))
+            self.assertEqual(source_note.read_bytes(), b"consumer-owned")
+
+    def test_legacy_modified_or_unrecognized_entries_refuse_all_writes(self):
+        for kind in ("modified", "symlink", "directory", "extra", "lock", "missing-lock", "list-lock"):
+            with self.subTest(kind=kind), tempfile.TemporaryDirectory() as temporary:
+                root = Path(temporary)
+                retired = self.legacy_fixture(root)
+                target = root / next(iter(retired))
+                if kind == "modified":
+                    target.write_bytes(b"consumer edits")
+                elif kind in ("symlink", "directory"):
+                    target.unlink()
+                    if kind == "symlink":
+                        target.symlink_to(root / "absent")
+                    else:
+                        target.mkdir()
+                elif kind == "extra":
+                    (target.parent / "mishkal-unmanaged.svg").write_bytes(b"preserve")
+                elif kind == "missing-lock":
+                    (root / distribution.CONSUMER_LOCK).unlink()
+                else:
+                    (root / distribution.CONSUMER_LOCK).write_bytes(b"[]" if kind == "list-lock" else b"{}")
+                before = self.snapshot(root)
+                with mock.patch.object(distribution, "_retired_files", return_value=retired):
+                    with self.assertRaises(distribution.VerificationError):
+                        distribution.sync_consumer(root)
+                self.assertEqual(before, self.snapshot(root))
+
+    def test_read_only_check_rejects_retired_files_without_mutation(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            self.legacy_fixture(root)
+            before = self.snapshot(root)
+            with self.assertRaisesRegex(distribution.VerificationError, "extra"):
+                distribution.check_consumer(root)
+            self.assertEqual(before, self.snapshot(root))
+
+    def test_partial_legacy_migration_can_be_retried(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            retired = self.legacy_fixture(root)
+            with mock.patch.object(distribution, "_retired_files", return_value=retired):
+                # Simulate ordinary I/O failure after a retired file was removed.
+                original_unlink = Path.unlink
+                removed = []
+
+                def unlink(path, *args, **kwargs):
+                    if path.relative_to(root).as_posix() in retired:
+                        if removed:
+                            raise OSError("simulated retirement interruption")
+                        removed.append(path)
+                    return original_unlink(path, *args, **kwargs)
+
+                with mock.patch.object(Path, "unlink", unlink):
+                    with self.assertRaisesRegex(OSError, "simulated"):
+                        distribution.sync_consumer(root)
+                distribution.sync_consumer(root)
+                distribution.check_consumer(root)
+                self.assertFalse(any((root / path).exists() for path in retired))
 
     def test_distributed_fonts_have_sil_licenses(self):
         manifest = distribution.check_source()
@@ -238,7 +343,7 @@ class BrandDistributionTests(unittest.TestCase):
             (".", "file"),
             ("public", "file"),
             ("public/brand/icons", "file"),
-            ("public/brand/svg/mishkal-wordmark-white.svg", "directory"),
+            ("public/brand/svg/phioon-wordmark-white.svg", "directory"),
             ("public/brand/icons/favicon.svg", "fifo"),
             ("public/brand/icons/unapproved", "fifo"),
         )
@@ -281,7 +386,7 @@ class BrandDistributionTests(unittest.TestCase):
             self.assertEqual(lock, {
                 "schemaVersion": 1,
                 "repository": "mishkal-ai/branding",
-                "version": "1.1.0",
+                "version": "2.0.0",
                 "revision": "a" * 40,
                 "webDistributionSha256": distribution._digest(distribution.WEB_MANIFEST)[1],
             })
