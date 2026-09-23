@@ -27,8 +27,8 @@
     },
     {
       "path": ".codex/agents/mishkal_triage.toml",
-      "bytes": 2947,
-      "sha256": "304fcfdca78aeece53134ca5a3121a098376f7e5fc4dd28a08dc29209a675880"
+      "bytes": 3030,
+      "sha256": "da71b75ece0fa084f0ab2079b3c617068e0c576468d36547591a53044f557761"
     },
     {
       "path": ".codex/agents/mishkal_webapp.toml",

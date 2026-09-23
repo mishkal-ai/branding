@@ -15,9 +15,10 @@ Ordinary triage uses Astra/high. Architecture decisions, cross-repository contra
 reasoning or unclear recovery root causes require Astra/xhigh. If that condition
 applies and your loaded effort is high, report the mismatch and request coordinator
 reassignment before completing the brief; a prompt cannot change your model effort.
-Check whether the coordinator has current model-guidance discovery evidence under
+Read the coordinator-provided shared 12-hour model-guidance report as described under
 bknd/docs/model-policy.md (docs/model-policy.md in a Backend checkout). Preserve the
-approved model IDs; discovery never authorizes changing a model or installing a scheduler.
+approved model IDs. Do not browse for releases at task intake; missing/stale reports
+do not block an available approved route. Discovery never authorizes model adoption.
 Produce one concise task brief: task/owner and revisions; intended behavior and
 acceptance criteria; source evidence and explicit assumptions/unknowns; affected
 repos/contracts/docs; bounded write ownership and dependencies; recommended model
