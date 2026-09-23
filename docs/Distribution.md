@@ -1,6 +1,6 @@
 # Web distribution contract
 
-`Web-Distribution.json` is the approved web subset of brand kit 1.1.0. Schema
+`Web-Distribution.json` is the approved web subset of PHIOON web distribution 2.0.0 (visual identity 1.0). Schema
 version 1 records the release `version`, deterministic `order`, `selfHash`
 policy, exact artifact `provenance`, managed consumer paths, and sorted file
 records containing source `path`, `consumerPath`, `bytes`, and SHA-256.
@@ -14,8 +14,8 @@ preserved. Consumer paths are a contract: coordinate changes with consumers.
 
 The kit follows semantic versioning: incompatible consumer-path or contract
 changes require a major version; additive approved assets/features use a minor
-version; compatible corrections use a patch version. Release `1.1.0` is named
-`v1.1.0` in Git tags/releases. A published version/tag must not be retargeted;
+version; compatible corrections use a patch version. Release `2.0.0` is named
+`v2.0.0` in Git tags/releases. A published version/tag must not be retargeted;
 corrections require a new version. The lock records the version without the `v`
 prefix and binds the full commit, not a mutable branch or tag name.
 
@@ -34,7 +34,7 @@ that maintenance; actual release/consumer changes follow the procedure below.
 3. Run the three checks in `docs/Verification.md` and inspect the complete diff.
 4. Publish the reviewed task through the repository lifecycle. After the user
    merges it, verify the clean release commit and its checks. Only when separately
-   authorized, create the immutable `v1.1.0` tag and release at that exact commit;
+   authorized, create the immutable `v2.0.0` tag and release at that exact commit;
    record its commit and `Web-Distribution.json` SHA-256 in the release notes.
 5. In a separately authorized consumer task, acquire that committed source,
    run `sync`, review the assets and lock diff together, update consumer-owned
@@ -54,7 +54,7 @@ Sync writes a deterministic root `brand.lock.json` after copying the assets:
 {
   "schemaVersion": 1,
   "repository": "mishkal-ai/branding",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "revision": "<full Branding commit>",
   "webDistributionSha256": "<SHA-256 of exact Web-Distribution.json bytes>"
 }
@@ -123,7 +123,8 @@ destination, intervening component, and managed directory before its first write
 It rejects symlinks (including root, internal, external, dangling, and matching-byte
 links), unsupported entry types, and files/directories in the wrong position.
 Unexpected files and directories fail preflight; extra directories are not
-traversed and no extras are deleted. Diagnostics identify the consumer-relative
+traversed. Only verified retired 1.1.0 filenames are removed during the explicit
+migration described below. No arbitrary extras are deleted. Diagnostics identify the consumer-relative
 offender (`.` denotes the consumer root). Invalid paths or topology leave the
 entire consumer tree unchanged, including files that otherwise need repair.
 
@@ -132,3 +133,41 @@ their modification times. Consumer verification uses the same topology checks.
 Run with exclusive access to the consumer tree: preflight is not protection
 against concurrent filesystem changes, and per-file atomic replacement is not
 a transaction rolling back unrelated I/O failures during sync.
+
+## Migration from 1.1.0
+
+Version 2.0.0 changes managed asset filenames to `phioon-*` and tokens to
+`--phioon-*`. It keeps the schema version and destination roots unchanged.
+The `visualIdentityVersion` manifest field distinguishes the supplied visual
+identity 1.0 from the incompatible distribution release 2.0.0. The provenance
+record identifies the preserved PHIOON input commit and its white-on-Deep-Navy
+browser favicons. Operational repository coordinates remain
+`mishkal-ai/branding`.
+
+`scripts/legacy-web-distribution-1.1.0.json` is the frozen previous allowlist,
+including checksums. It is migration metadata, not a dependency on an archived
+artwork folder. Do not edit this historical contract to accommodate drift.
+
+When sync encounters any of the 18 retired icon/SVG filenames, it requires a
+schema-1 lock for `mishkal-ai/branding` version `1.1.0`, a full hexadecimal
+revision and the exact frozen manifest checksum. Every present retired file
+must be a regular file with its approved bytes and SHA-256. The complete
+consumer topology, legacy lock and retirement checks run before any write.
+Unknown files, modified retired files, symlinks and misplaced entries fail
+without changing the consumer tree; preserve and reconcile them explicitly.
+
+After preflight, sync copies the new release, unlinks only the verified retired
+files and writes the new lock. It does not recursively delete directories.
+Missing legacy files are permitted so an interrupted migration can be retried;
+matching current files retain their modification times. Per-file writes are
+atomic, but the whole operation is not a transaction: use exclusive tree access
+and rerun after an ordinary I/O failure. Fresh consumers need no legacy lock.
+Read-only `check-consumer` never migrates and rejects any remaining legacy files.
+
+The consumer owner must update visible/accessibility text, metadata, asset and
+token references, logo sizing, and consumer-owned provenance documentation in
+the same upgrade. Sync cannot update application code, domains or deployment
+configuration. Upgrade Branding source first, then consumer assets/lock and
+application references together; run each consumer's complete local profile.
+Publication does not authorize merging, release tagging, deployment or moving
+the user's legacy archive.

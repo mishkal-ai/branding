@@ -1,18 +1,19 @@
-/* Mishkal identity 1.1 semantic tokens. No font files are loaded by this file. */
+/* phioon identity 1.0. The logo itself uses SVG paths, not these fonts. */
 :root {
-  --mishkal-teal: #007f78;
-  --mishkal-ink: #10252b;
-  --mishkal-paper: #f5f4ef;
-  --mishkal-navy: #071c22;
-  --mishkal-teal-text: #006d67;
-  --mishkal-aqua: #34d6bb;
-  --mishkal-slate: #52666b;
-  --mishkal-divider: #ccd7d4;
-  --mishkal-white: #ffffff;
-  --mishkal-font-body: 'Manrope', system-ui, sans-serif;
-  --mishkal-font-data: 'IBM Plex Mono', ui-monospace, monospace;
-  --mishkal-body-size: 1rem;
-  --mishkal-body-leading: 1.5;
+  --phioon-teal: #007f78;
+  --phioon-petrol: #3a5966;
+  --phioon-ink: #10252b;
+  --phioon-paper: #f5f4ef;
+  --phioon-navy: #071c22;
+  --phioon-teal-text: #006d67;
+  --phioon-aqua: #34d6bb;
+  --phioon-slate: #52666b;
+  --phioon-divider: #ccd7d4;
+  --phioon-white: #ffffff;
+  --phioon-font-body: 'Manrope', system-ui, sans-serif;
+  --phioon-font-data: 'IBM Plex Mono', ui-monospace, monospace;
+  --phioon-body-size: 1rem;
+  --phioon-body-leading: 1.5;
 }
 /* Prefer ink or teal-text for small text on paper. Aqua is for dark surfaces.
    Divider is decorative: do not rely on it alone to identify controls.

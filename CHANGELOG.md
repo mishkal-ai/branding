@@ -1,5 +1,20 @@
 # Changelog
 
+## 2.0.0 - 2026-09-23
+
+- Adopt supplied PHIOON visual identity 1.0 without altering artwork bytes.
+  Replace Mishkal asset filenames and CSS tokens with PHIOON names; minimum
+  horizontal/wordmark widths are 220/170 px, with built-in clear space retained.
+- Adopt supplied white-on-Deep-Navy browser favicons, app and touch icons.
+- Keep tokens side-effect-free and optional font loading in `font-faces.css`.
+  Include all supporting fonts and SIL licenses independently of the legacy kit.
+- Regenerate deterministic manifests and add narrowly scoped 1.1.0 consumer
+  migration: validate the legacy lock, topology and old-file checksums before
+  writing, retire only approved unchanged old filenames, preserve unknown files
+  by failing preflight, and retain read-only strict consumer verification.
+- Keep the legacy distribution manifest as frozen migration metadata. The old
+  artwork remains in Git history and is not required by this release.
+
 ## Unreleased
 
 - Replace `brand-kit` GitHub Actions with coordinator-run Python 3.12 manifest,

@@ -1,123 +1,90 @@
-# Mishkal production brand kit 1.1.0
+# PHIOON visual identity 1.0 / web distribution 2.0.0
 
-Production artwork based on the selected **A1.2 / Light** direction: Portfolio Weave symbol, lowercase Signature lettering and the split k. Created 18 September 2026; web distribution updated 20 September 2026.
+Refined from the selected **01 — Original, preserved** direction, 23 September 2026.
 
 ## Start here
 
-- **Mishkal-Brand-Guide-v1.pdf:** the complete 11-page identity guide.
-- **Mishkal-Identity-Preview.png:** a quick visual overview of the production logo.
-- **svg/mishkal-horizontal-color.svg:** the primary editable vector master for light backgrounds.
-- **svg/mishkal-horizontal-white.svg:** the reversed, transparent logo for dark backgrounds.
-- **icons/favicon.svg:** the optical small-size symbol in Mishkal Teal on transparency.
+- **PHIOON-Identity-Preview.png**: the final horizontal logo in color and white.
+- **PHIOON-Website-Preview.png**: an illustrative placement in the current website style.
+- **PHIOON-Brand-Guide-v1.pdf**: the updated 11-page brand guide.
+- **svg/phioon-horizontal-color.svg**: the primary vector master.
 
-All logo lettering is outlined. You do not need to install a font to use or edit the logos. SVG files contain editable paths, not embedded images. Keep the supplied proportions and viewBox.
+## What changed
 
-For repository work, read [AGENTS.md](AGENTS.md) and
-[repository controls](docs/Repository.md), including the shared reasoning trial
-and model-upgrade policy. Branding owns approved identity; Website
-and Webapp own their compositions. The shared frontend role serves explicitly
-assigned consumers, while Branding has an explicitly bounded writer. A consumer
-upgrade follows the distribution contract and its own registered task.
+The original PHIOON letterforms, thin weight, circular cut O shapes and internal letter spacing are preserved as vector paths. No font substitution or outline thickening was applied.
 
-The coordinator runs the complete `brand-kit` checks locally using Python 3.12:
-manifest freshness, source validation and distribution-tool tests. The fixed
-[policy](.github/local-checks.json) replaces GitHub Actions with clean-commit evidence;
-see [repository controls](docs/Repository.md) for commands and transition requirements.
-These are asset integrity/tooling checks, not visual design approval.
-The repository is public so locked consumer builds can acquire an exact release
-revision without a dedicated cross-repository secret. Consumers still validate
-the committed lock and assets; public access does not replace integrity checks.
+The Portfolio Weave is now approximately the same height as the capitals: 185.64 design units beside a 184-unit wordmark. This reduces the symbol by approximately 11.4% relative to the selected study. The gap increased from 84.36 to 92 design units, approximately half the capital height. Both shapes are vertically centered by their outline bounds.
 
-## Assets
+The primary color logo combines deep teal #007F78, ink #10252B and the historical petrol-blue O accent #3A5966. White, ink and pure-black variants are included. Supporting colors and fonts continue the preceding brand system.
 
-| Folder or file | Contents |
+## Package
+
+| Folder | Contents |
 |---|---|
-| `svg/` | Horizontal, stacked, wordmark, standard symbol and small-size symbol; color, ink, pure black and white variants. Also two named background versions. |
-| `png/` | Transparent exports at 1600 px wide for lockups and wordmarks; 512 px wide for standalone symbols. Background versions are explicitly named. |
-| `icons/` | Navy installed-app PNGs at 16, 24, 32, 48, 64, 128, 180, 192, 256 and 512 px; transparent browser favicon SVG and ICO; app icon SVG; web manifest. |
-| `fonts/` | Original Manrope variable TTF, IBM Plex Mono regular and medium TTF, and SIL OFL license files. |
-| `docs/` | Usage notes, small-size proof, distribution contract and verification record. |
-| `brand-tokens.css` | Semantic color and type tokens with no font-loading side effects. |
-| `font-faces.css` | Optional local declarations for the bundled supporting fonts. |
-| `geometry.json` | Documented path geometry, color values and layout dimensions. SVG masters remain the placement reference. |
-| `Asset-Manifest.json` | Deterministic full release inventory and checksums; excludes itself. |
-| `Web-Distribution.json` | Approved, checksummed source-to-consumer web allowlist. |
+| svg | 22 outlined SVG assets: horizontal, stacked, wordmark, symbol and optical small symbol in color/ink/black/white; plus two named background variants |
+| png | Matching exports, 1800 px wide for lockups and wordmarks; 512 px for symbols |
+| icons | Square icons from 16 to 512 px, SVG favicon, four-size ICO, app icon SVG and manifest |
+| fonts | Manrope variable and IBM Plex Mono regular/medium, with original licenses |
+| docs | Placement instructions, verification notes and digital size proofs |
 
-## Layout and size
+`brand-tokens.css` contains side-effect-free supporting type and color tokens
+under `--phioon-*`; it never loads fonts. Optional `font-faces.css` loads the
+bundled local fonts and is excluded from the web allowlist. Consumers may use
+their own font loader. `geometry.json` records the outlines and placement
+dimensions. `Asset-Manifest.json` lists release files and checksums;
+`Web-Distribution.json` defines the approved consumer subset.
 
-Use the horizontal logo by default. Use the wordmark when the layout is too narrow, and the symbol by itself where the brand is already understood.
+Read [AGENTS.md](AGENTS.md), [repository controls](docs/Repository.md),
+[distribution](docs/Distribution.md), [implementation](docs/Implementation.md)
+and [verification](docs/Verification.md) before integrating the release.
 
-Digital minimum widths, including the built-in clear-space frame:
+## Sizes and spacing
 
-- Horizontal logo: **200 px**.
-- Wordmark: **140 px**.
-- Stacked logo: **180 px**.
-- Square app icon: **16 px**. Use the optical small-size version below 48 px; the supplied 16, 24 and 32 px files already do this.
+Minimum digital widths refer to the complete supplied canvas:
 
-The master unit `u` is 40 design units, approximately one-sixth of the symbol height. Horizontal symbol-to-wordmark separation is `u`. Minimum external clear space is `u`; it is already included in the SVG canvas. The horizontal canvas is 1342 x 318 units.
+- Horizontal: **220 px minimum**, 240–280 px preferred; the website preview uses 260 px.
+- Wordmark: **170 px minimum**.
+- Stacked: **220 px minimum**.
+- App icon: **16 px minimum**; use the optical variant below 48 px.
 
-Physical print starting sizes: 35 mm horizontal width, 25 mm stacked width, and 8 mm symbol width. These require a proof on the intended process and material. The kit uses an sRGB palette; it is not a set of printer-specific CMYK separations.
+The horizontal canvas is approximately 1493.153 × 265.64 units. Its built-in clear space is 40 units on each side. Preserve the viewBox and proportions. Do not crop away the padding.
 
-## Colors
+Physical print starting sizes are 45 mm horizontal, 35 mm stacked and 10 mm symbol. These require a physical proof. Web colors are sRGB; no press-specific CMYK or Pantone match is claimed.
 
-| Name | Hex | Role |
-|---|---|---|
-| Deep teal | `#007F78` | Symbol and brand accents |
-| Ink | `#10252B` | Text and one-color digital logo |
-| Warm paper | `#F5F4EF` | Light surfaces |
-| Deep navy | `#071C22` | Dark surfaces |
-| Text teal | `#006D67` | Small text and links on warm paper |
-| Aqua | `#34D6BB` | Accents on navy |
-| Slate | `#52666B` | Secondary text on paper |
+## Scope
 
-Use text teal rather than deep teal for small text on paper. Preserve the deep teal in the logo. Use white for the primary reversed logo. `black` assets use pure `#000000` for one-color artwork.
+The selected identity is implemented in the supplied files. Supporting typography,
+brand principles and the optional line “Trade with clarity. Live in balance.”
+are carried forward from the previous guide; the line remains an editorial option.
+This repository provides source assets, not evidence of a deployed consumer.
+The PHIOON artwork is preserved byte-for-byte from user input revision
+`a2154f5128b3715162a61d1ebc78b11c44d55c71`. The legacy kit remains in Git history;
+this release has no runtime, build or verification dependency on `mishkal/`.
 
-## Typography
+The wordmark comes from the supplied original PHIOON vector PDF. The weave comes from the existing approved identity. Only arrangement and size changed in the main logo.
 
-The logo is custom vector lettering, not a downloadable typeface. For supporting communication, use Manrope 400 for body text and 500-600 for headings and controls. Use IBM Plex Mono 400-500 sparingly for aligned values and research metadata. The included fonts retain their original licenses. Import `font-faces.css` only when a consumer wants the bundled local font-loading behavior; importing `brand-tokens.css` alone never requests a font resource.
+## Web consumer upgrade
 
-## Web distribution
+Distribution 2.0.0 intentionally changes asset filenames, CSS token names,
+minimum logo sizes and browser favicon treatment. Browser/app/touch icons now
+use the supplied white-on-Deep-Navy treatment. Website and Webapp must update
+their own text, metadata, layouts and asset references alongside the assets.
+Repository coordinates remain `mishkal-ai/branding`; rebranding does not rename
+repositories, domains, environment variables or persistent identifiers.
 
-`Web-Distribution.json` is the schema-versioned contract for the approved web
-subset. It records each source path, consumer path, byte count and SHA-256 in
-source-path order. It includes semantic tokens, selected logo masters, browser
-and installed-app icons, supporting fonts, and their SIL licenses. It excludes
-itself, optional `font-faces.css`, preview artwork, and print assets.
+From a clean committed Branding release:
 
 ```sh
 python3 scripts/brand_distribution.py sync --consumer-root ../webapp
 python3 scripts/brand_distribution.py check-consumer --consumer-root ../webapp
 ```
 
-These consumer commands require clean, committed Branding source. Sync generates
-the consumer's `brand.lock.json` with version, exact Branding commit and manifest
-checksum. Commit the lock with the assets. Consumer local verification acquires that pinned source
-and runs read-only `check-consumer`; absent or mismatched locks fail verification.
-See `docs/Distribution.md` for acquisition, versioning and release/upgrade steps.
+Sync writes the exact source revision into `brand.lock.json`. It can migrate the
+approved 1.1.0 lock by retiring only unchanged, allowlisted old filenames; unknown,
+modified or symlinked legacy entries fail before writes. Consumer-owned
+`public/brand/SOURCE.md` is preserved. Review the generated assets and lock
+together. See [the migration contract](docs/Distribution.md#migration-from-110).
 
-Consumer-owned files such as `public/brand/SOURCE.md` are preserved. Unexpected
-files or directories inside managed brand directories fail preflight and are
-never deleted automatically. Before any consumer write, sync rejects invalid
-manifest paths, root or managed-path symlinks, and unsupported or misplaced
-entries, leaving the consumer tree unchanged. Missing or tampered regular files
-can be repaired; matching regular files retain their modification times. See
-`docs/Distribution.md` for the contract, access requirements and release procedure.
-
-## Scope and status
-
-The user selected the A1.2 visual direction. This kit reconstructs its outlines, regularizes edges and stems, and adds production layouts, optical small-size artwork and usage guidance. The broader typography, palette roles and editorial examples are documented as the proposed supporting system. The line "Trade with clarity. Live in balance." remains an editorial option, not an approved part of the logo.
-
-Version 1.1.0 adopts the transparent browser favicon approved in webapp revision
-`65f7a3374e3b60c326692a6d05a680eff38a5a36`. It retains the existing
-small-symbol paths in Mishkal Teal and is not an artwork redesign. Installed app
-and touch icons remain white on Deep Navy. No product code, website, account,
-deployment, or consumer checkout was changed. The kit's logo shapes are vector
-artwork, not a fresh image-generated variation.
-
-## Font provenance
-
-- [Manrope font source](https://github.com/google/fonts/tree/main/ofl/manrope) and [license](https://raw.githubusercontent.com/google/fonts/main/ofl/manrope/OFL.txt).
-- [IBM Plex Mono font source](https://github.com/google/fonts/tree/main/ofl/ibmplexmono) and [license](https://raw.githubusercontent.com/google/fonts/main/ofl/ibmplexmono/OFL.txt).
-- [W3C contrast guidance](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html) supports the text contrast checks.
-
-See `docs/Verification.md` for the checks performed and their limits.
+The coordinator runs Python 3.12 local verification at the final clean committed
+HEAD through the registered lifecycle. Source checks do not establish visual
+approval, consumer integration or deployment.

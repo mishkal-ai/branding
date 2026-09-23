@@ -1,5 +1,12 @@
 # Repository controls
 
+The current release is PHIOON visual identity 1.0 / web distribution 2.0.0.
+The incompatible consumer upgrade is governed by [Distribution](Distribution.md).
+Artwork and fonts are self-contained at the root; no script, build or check may
+depend on the optional legacy `mishkal/` archive. The frozen 1.1.0 manifest under
+`scripts/` is retained solely to validate retirement of old consumer filenames.
+Repository and GitHub organization coordinates remain `mishkal-ai/branding`.
+
 [AGENTS.md](../AGENTS.md) carries the standalone triage, model, independent-review,
 registered-worktree, publication and documentation gates. The coordinator assigns
 a bounded Branding writer; the stable frontend role covers assigned Website or

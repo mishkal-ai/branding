@@ -1,16 +1,18 @@
 {
   "schemaVersion": 1,
-  "name": "mishkal approved web distribution",
-  "version": "1.1.0",
+  "name": "PHIOON approved web distribution",
+  "version": "2.0.0",
+  "visualIdentityVersion": "1.0",
   "order": "path (ascending Unicode code point order)",
   "selfHash": false,
   "provenance": {
     "browserFavicons": {
-      "repository": "mishkal-ai/webapp",
-      "revision": "65f7a3374e3b60c326692a6d05a680eff38a5a36",
+      "repository": "mishkal-ai/branding",
+      "revision": "a2154f5128b3715162a61d1ebc78b11c44d55c71",
+      "treatment": "white optical symbol on Deep Navy",
       "paths": [
-        "public/brand/icons/favicon.ico",
-        "public/brand/icons/favicon.svg"
+        "icons/favicon.ico",
+        "icons/favicon.svg"
       ]
     }
   },
@@ -26,8 +28,8 @@
   "files": [
     {
       "path": "brand-tokens.css",
-      "bytes": 752,
-      "sha256": "4558c9f0dbda626a7213db1b1f26ecb9e9f6b8ce7584044bf1490c570aeb2457",
+      "bytes": 760,
+      "sha256": "6c7f22690f9081a2920675e28232a6d9d426dd536e7baec299c51640a06ea664",
       "consumerPath": "public/brand/brand-tokens.css"
     },
     {
@@ -62,129 +64,129 @@
     },
     {
       "path": "icons/favicon.ico",
-      "bytes": 15086,
-      "sha256": "a88bcade16ef489d5754463c6c813a55c2b3dc87a6741dcf37d72e88f1acc580",
+      "bytes": 3680,
+      "sha256": "6bfee4cc3234d2f6d600e6fe268a27a6c707b950232f9d574426587b9c3e3591",
       "consumerPath": "public/brand/icons/favicon.ico"
     },
     {
       "path": "icons/favicon.svg",
-      "bytes": 1057,
-      "sha256": "c52be55308087333fe1d232c5c19559f43bf3191bb0295fe1a3af67aeff73219",
+      "bytes": 1074,
+      "sha256": "cdddce3dfa9fc4ccbe3de9fbc535168f44f7adf17a13b49add7dd6ace1143fd3",
       "consumerPath": "public/brand/icons/favicon.svg"
     },
     {
-      "path": "icons/mishkal-icon-128.png",
+      "path": "icons/phioon-icon-128.png",
       "bytes": 2629,
       "sha256": "ac70a71192b6db5b8a0dfe26a7bb9a96047d88222413e34618f87a25f75f0583",
-      "consumerPath": "public/brand/icons/mishkal-icon-128.png"
+      "consumerPath": "public/brand/icons/phioon-icon-128.png"
     },
     {
-      "path": "icons/mishkal-icon-16.png",
+      "path": "icons/phioon-icon-16.png",
       "bytes": 431,
       "sha256": "68b002c24c92fdd9fd8539b8164e66b95c22c22a6c0cbe0985f3aa3a81c7d3ff",
-      "consumerPath": "public/brand/icons/mishkal-icon-16.png"
+      "consumerPath": "public/brand/icons/phioon-icon-16.png"
     },
     {
-      "path": "icons/mishkal-icon-180.png",
+      "path": "icons/phioon-icon-180.png",
       "bytes": 3775,
       "sha256": "c8be3a383208dccf7faf926248f77f896013a73d3ac972b95125a6d6f2d66507",
-      "consumerPath": "public/brand/icons/mishkal-icon-180.png"
+      "consumerPath": "public/brand/icons/phioon-icon-180.png"
     },
     {
-      "path": "icons/mishkal-icon-192.png",
+      "path": "icons/phioon-icon-192.png",
       "bytes": 4140,
       "sha256": "72a29aac0e9a79f50228f46cdbb466f6abc14e583c129928572eaec5c7276a8f",
-      "consumerPath": "public/brand/icons/mishkal-icon-192.png"
+      "consumerPath": "public/brand/icons/phioon-icon-192.png"
     },
     {
-      "path": "icons/mishkal-icon-24.png",
+      "path": "icons/phioon-icon-24.png",
       "bytes": 624,
       "sha256": "f4246a57dd2750a5e992e6279eda9e688df4e19330f3e46f944f35c261f462bf",
-      "consumerPath": "public/brand/icons/mishkal-icon-24.png"
+      "consumerPath": "public/brand/icons/phioon-icon-24.png"
     },
     {
-      "path": "icons/mishkal-icon-256.png",
+      "path": "icons/phioon-icon-256.png",
       "bytes": 5504,
       "sha256": "4b9952276e201aa6e048330b786aa93308b092cbfb99928c8d53d0a5cc93b741",
-      "consumerPath": "public/brand/icons/mishkal-icon-256.png"
+      "consumerPath": "public/brand/icons/phioon-icon-256.png"
     },
     {
-      "path": "icons/mishkal-icon-32.png",
+      "path": "icons/phioon-icon-32.png",
       "bytes": 775,
       "sha256": "8855eb1e803d4c29b04e0f8b52d0fe6cc778d5a0879dbb0eec573431e58e30a9",
-      "consumerPath": "public/brand/icons/mishkal-icon-32.png"
+      "consumerPath": "public/brand/icons/phioon-icon-32.png"
     },
     {
-      "path": "icons/mishkal-icon-48.png",
+      "path": "icons/phioon-icon-48.png",
       "bytes": 1040,
       "sha256": "cd00b6c86352dbd6909cd08a5e34552bbb6fb7691d5d7fff6c3d2372785428e1",
-      "consumerPath": "public/brand/icons/mishkal-icon-48.png"
+      "consumerPath": "public/brand/icons/phioon-icon-48.png"
     },
     {
-      "path": "icons/mishkal-icon-512.png",
+      "path": "icons/phioon-icon-512.png",
       "bytes": 11746,
       "sha256": "911b59963be86e65d12fdfd7bd3ea2a1987e9f92c13ae0dd9679ac3b79fce499",
-      "consumerPath": "public/brand/icons/mishkal-icon-512.png"
+      "consumerPath": "public/brand/icons/phioon-icon-512.png"
     },
     {
-      "path": "icons/mishkal-icon-64.png",
+      "path": "icons/phioon-icon-64.png",
       "bytes": 1364,
       "sha256": "a64a53a70ae07a21deb68b76d367458ac4d06f34a73843ac58acc1007a6c04c5",
-      "consumerPath": "public/brand/icons/mishkal-icon-64.png"
+      "consumerPath": "public/brand/icons/phioon-icon-64.png"
     },
     {
       "path": "icons/site.webmanifest",
-      "bytes": 321,
-      "sha256": "5963f742fa60818a849f80e720de3fe928f86ea747e6ae9bf9656acabbac0203",
+      "bytes": 403,
+      "sha256": "0ed0f25130e597f4c37529a367cfbd930c6f87f914497fed87733cada7285c31",
       "consumerPath": "public/brand/icons/site.webmanifest"
     },
     {
-      "path": "svg/mishkal-horizontal-color.svg",
-      "bytes": 3893,
-      "sha256": "313d036453947dcec14df838f96f0e0c3ed8450d387f44a6474fb49536bb7138",
-      "consumerPath": "public/brand/svg/mishkal-horizontal-color.svg"
+      "path": "svg/phioon-horizontal-color.svg",
+      "bytes": 8512,
+      "sha256": "cbb641fb8481aabcffc9b78df9bbcc7d3ed7afce40b624a74a306b6f9b87d882",
+      "consumerPath": "public/brand/svg/phioon-horizontal-color.svg"
     },
     {
-      "path": "svg/mishkal-horizontal-white.svg",
-      "bytes": 3893,
-      "sha256": "9075a89af19f69a704a6790e88575ef7f35d6794be6dbe0cd43324797586b3aa",
-      "consumerPath": "public/brand/svg/mishkal-horizontal-white.svg"
+      "path": "svg/phioon-horizontal-white.svg",
+      "bytes": 8512,
+      "sha256": "b79da441c711f2099f2208614a535ca5fe31f7c4709df1e2c536849a0aae28fe",
+      "consumerPath": "public/brand/svg/phioon-horizontal-white.svg"
     },
     {
-      "path": "svg/mishkal-symbol-color.svg",
-      "bytes": 1104,
-      "sha256": "c9b03a204c7c9897c96a6737caf7313afd4eb1beed1d8960f8e80b0f37855277",
-      "consumerPath": "public/brand/svg/mishkal-symbol-color.svg"
+      "path": "svg/phioon-symbol-color.svg",
+      "bytes": 1073,
+      "sha256": "fd10b09dd6d04526976d612937c49de014cd32098de78e646685c0a381a2aeaa",
+      "consumerPath": "public/brand/svg/phioon-symbol-color.svg"
     },
     {
-      "path": "svg/mishkal-symbol-small-color.svg",
-      "bytes": 1067,
-      "sha256": "ae71a17f524d7ce2b5f6a73374b0e2d9da1f8df1aad3040f87b1f483cc98c625",
-      "consumerPath": "public/brand/svg/mishkal-symbol-small-color.svg"
+      "path": "svg/phioon-symbol-small-color.svg",
+      "bytes": 1036,
+      "sha256": "706b726a1f02ba3d6c45b6154297e3b8f7bfd399d16729f7972bd8d9615d2e71",
+      "consumerPath": "public/brand/svg/phioon-symbol-small-color.svg"
     },
     {
-      "path": "svg/mishkal-symbol-small-white.svg",
-      "bytes": 1067,
-      "sha256": "50f59edc539f7bfb441dd0895bddd25ae53f300d7430fdda45418de980ac8297",
-      "consumerPath": "public/brand/svg/mishkal-symbol-small-white.svg"
+      "path": "svg/phioon-symbol-small-white.svg",
+      "bytes": 1036,
+      "sha256": "08d0a0100ff09d28317bb3302bc304012e0ddb959ab072fd087082d1e6b98bd5",
+      "consumerPath": "public/brand/svg/phioon-symbol-small-white.svg"
     },
     {
-      "path": "svg/mishkal-symbol-white.svg",
-      "bytes": 1104,
-      "sha256": "1558a7210d1d3416427046abb3e900a558ff72ecfd3feb2f81e41c34b44f6647",
-      "consumerPath": "public/brand/svg/mishkal-symbol-white.svg"
+      "path": "svg/phioon-symbol-white.svg",
+      "bytes": 1073,
+      "sha256": "4b3937803cd5f53dbe526f551c343a3444f7f865e2c16d6bae7305fe31d782d4",
+      "consumerPath": "public/brand/svg/phioon-symbol-white.svg"
     },
     {
-      "path": "svg/mishkal-wordmark-ink.svg",
-      "bytes": 2957,
-      "sha256": "e53a9d0abcd0e2338fd7f8e29e121d3921ff9048615144769a295a5b2c016c2e",
-      "consumerPath": "public/brand/svg/mishkal-wordmark-ink.svg"
+      "path": "svg/phioon-wordmark-ink.svg",
+      "bytes": 7544,
+      "sha256": "c464356b22c035ec97dba8433cff5a544e89b41292b44700f6f56afe1dad457f",
+      "consumerPath": "public/brand/svg/phioon-wordmark-ink.svg"
     },
     {
-      "path": "svg/mishkal-wordmark-white.svg",
-      "bytes": 2957,
-      "sha256": "53fd92dab5e1debfa8d1c1ed83adac190542452a22a13ffe4853918414dc9f13",
-      "consumerPath": "public/brand/svg/mishkal-wordmark-white.svg"
+      "path": "svg/phioon-wordmark-white.svg",
+      "bytes": 7544,
+      "sha256": "21cf91ccadaa624d8ab8b75c1315435d79cef6824dba1aa8358634d020877335",
+      "consumerPath": "public/brand/svg/phioon-wordmark-white.svg"
     }
   ]
 }

@@ -1,7 +1,8 @@
 {
   "schemaVersion": 1,
-  "name": "mishkal brand kit",
-  "version": "1.1.0",
+  "name": "PHIOON brand kit",
+  "version": "2.0.0",
+  "visualIdentityVersion": "1.0",
   "order": "path (ascending Unicode code point order)",
   "selfHash": false,
   "files": [
@@ -41,6 +42,11 @@
       "sha256": "82316c19dd1eea8d7920a2ead10ef69dafd2ba0cff62b9ce54640994c5ce3354"
     },
     {
+      "path": ".gitattributes",
+      "bytes": 95,
+      "sha256": "8a48ded5b6777ccded712746ab4949255736fe3e819c87c4709a82cb40453c73"
+    },
+    {
       "path": ".github/local-checks.json",
       "bytes": 57,
       "sha256": "45717c13e8bf106b490b747a1cae807c77c8f6472bfb045c79682b1a2cf50524"
@@ -57,63 +63,73 @@
     },
     {
       "path": "AGENTS.md",
-      "bytes": 9349,
-      "sha256": "cbfb3dcb4a4a5ddba7270f3441e508c3774d02302a91555f57925f4f63c4e332"
+      "bytes": 9618,
+      "sha256": "e00fcadfd50d0b72cd8861ff551e7c4800513b8975a85039b25ded2e3db3560e"
     },
     {
       "path": "CHANGELOG.md",
-      "bytes": 2616,
-      "sha256": "48a03a3f77feec27c4a5ff4019db83244309ac2a58641b07c50daf5cbf725b1a"
+      "bytes": 3564,
+      "sha256": "bf9c962cc7011dd4fc837183fdee1d9bc9601842cc8484e360db3fa59f87be97"
     },
     {
-      "path": "Mishkal-Brand-Guide-v1.pdf",
-      "bytes": 67333,
-      "sha256": "69a61c10e96b7f790233de1f70ac0ccf76a8c2997bfd435450173c414af72c3e"
+      "path": "PHIOON-Brand-Guide-v1.pdf",
+      "bytes": 78577,
+      "sha256": "ce04fac2ca2f69116129474a578fc044fce8d586f90f4debc2265e9e45473227"
     },
     {
-      "path": "Mishkal-Identity-Preview.png",
-      "bytes": 62458,
-      "sha256": "81ed98ec2e823ea802aba472caf4de6b284fd921b2ece37b1da8164776caed41"
+      "path": "PHIOON-Identity-Preview.png",
+      "bytes": 81759,
+      "sha256": "9f795eb4449cb37149ced1d202c5c72f2bc85515a994312e4270d42dbf2dab2f"
+    },
+    {
+      "path": "PHIOON-Website-Preview.png",
+      "bytes": 109286,
+      "sha256": "147cade5e228bb1b95c7cebb7095f60e7762108e63cd0d2a94e3410fd85812d1"
     },
     {
       "path": "README.md",
-      "bytes": 8171,
-      "sha256": "37d9b673b8cd7219648d8071d5d571c43b819f459500c18a8100749f7a8eb90d"
+      "bytes": 5165,
+      "sha256": "60b0b769addbe80a4b8ec68f2c71cea1e96ab4891e51c4c6b22534c11252a62c"
     },
     {
       "path": "Web-Distribution.json",
-      "bytes": 6725,
-      "sha256": "db853db68195a17c80ab876b3a9f696cc595e7475de28ae5e62fdbe81f81460f"
+      "bytes": 6753,
+      "sha256": "41615fb2fce0c0f36dd630248fa42ad2550c110226b5d1d5b32ca938f41440c4"
     },
     {
       "path": "brand-tokens.css",
-      "bytes": 752,
-      "sha256": "4558c9f0dbda626a7213db1b1f26ecb9e9f6b8ce7584044bf1490c570aeb2457"
+      "bytes": 760,
+      "sha256": "6c7f22690f9081a2920675e28232a6d9d426dd536e7baec299c51640a06ea664"
+    },
+    {
+      "path": "docs/Compact-Layouts-Proof.png",
+      "bytes": 35129,
+      "sha256": "36a4b919d4496d4620e65f186d35d7c78be2a2bdf95d72f51bf58f84952084c7"
     },
     {
       "path": "docs/Distribution.md",
-      "bytes": 7547,
-      "sha256": "2ca197dd2687e8e6126f24568dde98b86e1d8076ccbbed3546b23f237fe5bc0e"
+      "bytes": 9986,
+      "sha256": "b4f03de0cd7f6851eaa34cc6c649aeea7a0c191043942ad5dbdf41e397621d76"
     },
     {
       "path": "docs/Implementation.md",
-      "bytes": 4007,
-      "sha256": "a2f4ab7718b35bdd5b9c9d06a4d8fc19226129dd180b0831c9e66f208ac4bb44"
+      "bytes": 2937,
+      "sha256": "52817be76bb37fde2f7f6e67081f88a309836e074a578894ed7f56981abb376f"
     },
     {
       "path": "docs/Repository.md",
-      "bytes": 3546,
-      "sha256": "43adb6afdc15cb4bb92e4e695bfb3ae9db8bc882144fb249eb4bef5b32564b81"
+      "bytes": 4024,
+      "sha256": "91b0c5f41ac5418d4095700173dd24710cbe10ea707655a6c045cc12d9e31fd2"
     },
     {
       "path": "docs/Size-Proof.png",
-      "bytes": 96069,
-      "sha256": "87f306fbab1a76280f091f51c20bb3138492e134a39d53ef9948980148d593a4"
+      "bytes": 100716,
+      "sha256": "59b848fea329880c154334bc59c907ea103a9f892d36101d6a9754eacbba7825"
     },
     {
       "path": "docs/Verification.md",
-      "bytes": 2881,
-      "sha256": "e176c2820c546efb58b3f27a3db12490b140fac0d2a5c7490c0cfd3b8c5b42b4"
+      "bytes": 2757,
+      "sha256": "53b66d4870d151d650aa8a4f7a16e98af9707c1de86a5d0b34d62a7d3bb99bfc"
     },
     {
       "path": "font-faces.css",
@@ -147,308 +163,313 @@
     },
     {
       "path": "geometry.json",
-      "bytes": 4752,
-      "sha256": "eac41584fdd186f11d3274a0056a56c3b65e9d4087a3496ffdc3a0da819f0d55"
+      "bytes": 11073,
+      "sha256": "2e5d4c22fb9ff0b419666d24b92c068da92ca96182635b39446ca7120ca28a9f"
     },
     {
       "path": "icons/favicon.ico",
-      "bytes": 15086,
-      "sha256": "a88bcade16ef489d5754463c6c813a55c2b3dc87a6741dcf37d72e88f1acc580"
+      "bytes": 3680,
+      "sha256": "6bfee4cc3234d2f6d600e6fe268a27a6c707b950232f9d574426587b9c3e3591"
     },
     {
       "path": "icons/favicon.svg",
-      "bytes": 1057,
-      "sha256": "c52be55308087333fe1d232c5c19559f43bf3191bb0295fe1a3af67aeff73219"
+      "bytes": 1074,
+      "sha256": "cdddce3dfa9fc4ccbe3de9fbc535168f44f7adf17a13b49add7dd6ace1143fd3"
     },
     {
-      "path": "icons/mishkal-app-icon.svg",
-      "bytes": 1148,
-      "sha256": "b0ce007e3a042ab0f3b999f345afd1520b6e90a5f2b328139fe3751c92a36513"
+      "path": "icons/phioon-app-icon.svg",
+      "bytes": 1117,
+      "sha256": "bdac203bf2bcc9d11a4fc7b03df2874766b95cb1a54d4cbc896e14dd2e5b59be"
     },
     {
-      "path": "icons/mishkal-icon-128.png",
+      "path": "icons/phioon-icon-128.png",
       "bytes": 2629,
       "sha256": "ac70a71192b6db5b8a0dfe26a7bb9a96047d88222413e34618f87a25f75f0583"
     },
     {
-      "path": "icons/mishkal-icon-16.png",
+      "path": "icons/phioon-icon-16.png",
       "bytes": 431,
       "sha256": "68b002c24c92fdd9fd8539b8164e66b95c22c22a6c0cbe0985f3aa3a81c7d3ff"
     },
     {
-      "path": "icons/mishkal-icon-180.png",
+      "path": "icons/phioon-icon-180.png",
       "bytes": 3775,
       "sha256": "c8be3a383208dccf7faf926248f77f896013a73d3ac972b95125a6d6f2d66507"
     },
     {
-      "path": "icons/mishkal-icon-192.png",
+      "path": "icons/phioon-icon-192.png",
       "bytes": 4140,
       "sha256": "72a29aac0e9a79f50228f46cdbb466f6abc14e583c129928572eaec5c7276a8f"
     },
     {
-      "path": "icons/mishkal-icon-24.png",
+      "path": "icons/phioon-icon-24.png",
       "bytes": 624,
       "sha256": "f4246a57dd2750a5e992e6279eda9e688df4e19330f3e46f944f35c261f462bf"
     },
     {
-      "path": "icons/mishkal-icon-256.png",
+      "path": "icons/phioon-icon-256.png",
       "bytes": 5504,
       "sha256": "4b9952276e201aa6e048330b786aa93308b092cbfb99928c8d53d0a5cc93b741"
     },
     {
-      "path": "icons/mishkal-icon-32.png",
+      "path": "icons/phioon-icon-32.png",
       "bytes": 775,
       "sha256": "8855eb1e803d4c29b04e0f8b52d0fe6cc778d5a0879dbb0eec573431e58e30a9"
     },
     {
-      "path": "icons/mishkal-icon-48.png",
+      "path": "icons/phioon-icon-48.png",
       "bytes": 1040,
       "sha256": "cd00b6c86352dbd6909cd08a5e34552bbb6fb7691d5d7fff6c3d2372785428e1"
     },
     {
-      "path": "icons/mishkal-icon-512.png",
+      "path": "icons/phioon-icon-512.png",
       "bytes": 11746,
       "sha256": "911b59963be86e65d12fdfd7bd3ea2a1987e9f92c13ae0dd9679ac3b79fce499"
     },
     {
-      "path": "icons/mishkal-icon-64.png",
+      "path": "icons/phioon-icon-64.png",
       "bytes": 1364,
       "sha256": "a64a53a70ae07a21deb68b76d367458ac4d06f34a73843ac58acc1007a6c04c5"
     },
     {
       "path": "icons/site.webmanifest",
-      "bytes": 321,
-      "sha256": "5963f742fa60818a849f80e720de3fe928f86ea747e6ae9bf9656acabbac0203"
+      "bytes": 403,
+      "sha256": "0ed0f25130e597f4c37529a367cfbd930c6f87f914497fed87733cada7285c31"
     },
     {
-      "path": "png/mishkal-horizontal-black-1600.png",
-      "bytes": 29046,
-      "sha256": "0f046909630bd1767158ec795ad7c9e024b687e90fec331637f483fdac757dda"
+      "path": "png/phioon-horizontal-black-1800.png",
+      "bytes": 27900,
+      "sha256": "11cbdc82f4c578b2c285fdc5d6cf22b8b295419344462215625d159113801d11"
     },
     {
-      "path": "png/mishkal-horizontal-color-1600.png",
-      "bytes": 31674,
-      "sha256": "6dba7a5e9e276a53efaf4c60c6127c7a3f443bc9527302638e14a22680af6ba1"
+      "path": "png/phioon-horizontal-color-1800.png",
+      "bytes": 32227,
+      "sha256": "a499d5c7ed38b14e80bbf71fdf112719e28248c7f9391eee8fd4810f5b1a9c39"
     },
     {
-      "path": "png/mishkal-horizontal-dark-background-1600.png",
-      "bytes": 30831,
-      "sha256": "1eca1014aef79a0555244c101b1314b6ac9cb84416238300a6c044f8e84830bc"
+      "path": "png/phioon-horizontal-dark-background-1800.png",
+      "bytes": 28888,
+      "sha256": "ec23bbaf1d0f99af1c7d1aab321eaa665272c1d74a49abe476928e1eb4f34b25"
     },
     {
-      "path": "png/mishkal-horizontal-ink-1600.png",
-      "bytes": 31946,
-      "sha256": "342d4e1485fc9c07c299089d05a02e1c0f75041f907b3a62c8d74905bcacd5c6"
+      "path": "png/phioon-horizontal-ink-1800.png",
+      "bytes": 30650,
+      "sha256": "b5e2dec257afe07fd1c3318f57d151374df0c00a6f305be8b88b7c149813245d"
     },
     {
-      "path": "png/mishkal-horizontal-light-background-1600.png",
-      "bytes": 31403,
-      "sha256": "80df488955e0856c801c3a8eb208f419ed03134257f01397f66738a9525140cb"
+      "path": "png/phioon-horizontal-light-background-1800.png",
+      "bytes": 32343,
+      "sha256": "0cc3c9c81b7b5bafd3ecf0b445533d6cf386c0fd9ceddca7f4a2d06847b7589a"
     },
     {
-      "path": "png/mishkal-horizontal-white-1600.png",
-      "bytes": 36707,
-      "sha256": "9998869dd070af8eba3c379fef9dfb6a86f00d98a5060b6488e602da945678cf"
+      "path": "png/phioon-horizontal-white-1800.png",
+      "bytes": 35700,
+      "sha256": "0e37573ec5cd4f606b0064f23b69295814be2811f8bbaa1968b5125527f55753"
     },
     {
-      "path": "png/mishkal-stacked-black-1600.png",
-      "bytes": 44381,
-      "sha256": "68639993fddfc58ebb4f27ab3311ed55fd367904b44c1e3d72883fb3ade44b71"
+      "path": "png/phioon-stacked-black-1800.png",
+      "bytes": 43193,
+      "sha256": "9a0ca3d35f357a96a827afd4e14fe1f17e8a6da7c80badc58f75a32bb032b41f"
     },
     {
-      "path": "png/mishkal-stacked-color-1600.png",
-      "bytes": 47368,
-      "sha256": "2c1f416097f854e167804c8eaca841aa6e7b66d4b0ddfaab0f2bdff59cd19eff"
+      "path": "png/phioon-stacked-color-1800.png",
+      "bytes": 48780,
+      "sha256": "dad68e2cc049f4e836990869811e29b7380f646dc008bdc52441de6d77fd0210"
     },
     {
-      "path": "png/mishkal-stacked-ink-1600.png",
-      "bytes": 47725,
-      "sha256": "9d4017a6bb6a4cf0c8910a7f73908e540f18d6a120626629f0bdac557398bcdf"
+      "path": "png/phioon-stacked-ink-1800.png",
+      "bytes": 47300,
+      "sha256": "8b07c46c76446f3529624432de4becb7f7087e5ce3a6fe12bfdf0c873b2e11f2"
     },
     {
-      "path": "png/mishkal-stacked-white-1600.png",
-      "bytes": 55377,
-      "sha256": "9b2e0bf92fbf4e3609f761ea19b6494cd88656ea656406563d351d3fcf9fefee"
+      "path": "png/phioon-stacked-white-1800.png",
+      "bytes": 54537,
+      "sha256": "34ac1b26bebe4d424c274981ea5438731f15a0437a4bb5db2f9a735bade4a9c7"
     },
     {
-      "path": "png/mishkal-symbol-black-512.png",
+      "path": "png/phioon-symbol-black-512.png",
       "bytes": 10963,
       "sha256": "4a73277f14425ece9330366ff092ae3c4c05af28f34cce6c8bc86bdaa3f8a002"
     },
     {
-      "path": "png/mishkal-symbol-color-512.png",
+      "path": "png/phioon-symbol-color-512.png",
       "bytes": 11322,
       "sha256": "92800c3ebd2eef5dbce7cd52e5b59f7f95c579bd115377e7433d117edf926d23"
     },
     {
-      "path": "png/mishkal-symbol-ink-512.png",
+      "path": "png/phioon-symbol-ink-512.png",
       "bytes": 11277,
       "sha256": "3b13b3752b83324a9ced4843180cb679ea5b000e7e20f07ececbfe5942ffdc19"
     },
     {
-      "path": "png/mishkal-symbol-small-black-512.png",
+      "path": "png/phioon-symbol-small-black-512.png",
       "bytes": 10738,
       "sha256": "1873fccc07eb7e2bf356cb6cf4817e05fde05c521bab6f675b19b542a7d68a9e"
     },
     {
-      "path": "png/mishkal-symbol-small-color-512.png",
+      "path": "png/phioon-symbol-small-color-512.png",
       "bytes": 10994,
       "sha256": "11615d5ae1a6a1b72da4968ebfb3d87aca92990d9637ec4d69032afeb261e2f2"
     },
     {
-      "path": "png/mishkal-symbol-small-ink-512.png",
+      "path": "png/phioon-symbol-small-ink-512.png",
       "bytes": 10892,
       "sha256": "bc1c2ec05069c141068219911ef5c611f131bc41182d7a1945ffd19496f64fca"
     },
     {
-      "path": "png/mishkal-symbol-small-white-512.png",
+      "path": "png/phioon-symbol-small-white-512.png",
       "bytes": 12979,
       "sha256": "e94a055cfc8cd9053826a616f52c685b637fe0d0e820a69f01120c253d37c6a3"
     },
     {
-      "path": "png/mishkal-symbol-white-512.png",
+      "path": "png/phioon-symbol-white-512.png",
       "bytes": 13306,
       "sha256": "4b40afb10da5017f3097362225db2c65fde9456e2966f30155e77352a8139100"
     },
     {
-      "path": "png/mishkal-wordmark-black-1600.png",
-      "bytes": 27109,
-      "sha256": "ed72e83f8c28f0e23c250f4ad68be21c051c7f049495a1c0d662b87c01c3d6b4"
+      "path": "png/phioon-wordmark-black-1800.png",
+      "bytes": 29123,
+      "sha256": "36a2b8a796e02189be2a2c739f4f8ac324c41892cf5b4701e606879009486449"
     },
     {
-      "path": "png/mishkal-wordmark-color-1600.png",
-      "bytes": 28083,
-      "sha256": "04424ef783edd248548ce34be2e42f8645e4f1e20c1eb771dd06082665bcb5a4"
+      "path": "png/phioon-wordmark-color-1800.png",
+      "bytes": 32736,
+      "sha256": "a826c3142fb5dca82f08b099a3cc5dd986d95c70544b410f49e1d1621872cb2b"
     },
     {
-      "path": "png/mishkal-wordmark-ink-1600.png",
-      "bytes": 28083,
-      "sha256": "04424ef783edd248548ce34be2e42f8645e4f1e20c1eb771dd06082665bcb5a4"
+      "path": "png/phioon-wordmark-ink-1800.png",
+      "bytes": 30978,
+      "sha256": "b6f675ce1b2b808370878bcf9d4aedf1db899942b927db9e6c29366f8c4a7aa5"
     },
     {
-      "path": "png/mishkal-wordmark-white-1600.png",
-      "bytes": 34477,
-      "sha256": "d017a0e0d012bb6ec7161532fd7546a0f18d7a8d99d67e9e06ce5640e738c6ec"
+      "path": "png/phioon-wordmark-white-1800.png",
+      "bytes": 37347,
+      "sha256": "34eb26f413e324842128cb433ab73aacf6d7653305d15216891aa3de3e0cbf60"
     },
     {
       "path": "scripts/brand_distribution.py",
-      "bytes": 18406,
-      "sha256": "d18e5a3897959f285d647c7a3b6c54dcaf5287bcaee6bb4e4da5e2c159085cb7"
+      "bytes": 20737,
+      "sha256": "e621511a5a86ecef349400513710b91c4514f2ebce235c50116e279f13f0dff1"
     },
     {
-      "path": "svg/mishkal-horizontal-black.svg",
-      "bytes": 3893,
-      "sha256": "4d69a44966b8c3082f1f747dc78b49681968047b8fcb26a279d9cbe93962bfb6"
+      "path": "scripts/legacy-web-distribution-1.1.0.json",
+      "bytes": 6725,
+      "sha256": "db853db68195a17c80ab876b3a9f696cc595e7475de28ae5e62fdbe81f81460f"
     },
     {
-      "path": "svg/mishkal-horizontal-color.svg",
-      "bytes": 3893,
-      "sha256": "313d036453947dcec14df838f96f0e0c3ed8450d387f44a6474fb49536bb7138"
+      "path": "svg/phioon-horizontal-black.svg",
+      "bytes": 8512,
+      "sha256": "f84b084a028dc1c450bdbb849efe5c14c5cbf801cc71a1ba5a562145c492ac25"
     },
     {
-      "path": "svg/mishkal-horizontal-dark-background.svg",
-      "bytes": 3925,
-      "sha256": "d1fc074f5a9b4cc70feedb8df034e5e2460ae106769fe051a68586e4af5768bc"
+      "path": "svg/phioon-horizontal-color.svg",
+      "bytes": 8512,
+      "sha256": "cbb641fb8481aabcffc9b78df9bbcc7d3ed7afce40b624a74a306b6f9b87d882"
     },
     {
-      "path": "svg/mishkal-horizontal-ink.svg",
-      "bytes": 3893,
-      "sha256": "ce1f5fa6b46f4bba86df0ae3e613a2cfca29ef362ae16583461bc6a80ce76aea"
+      "path": "svg/phioon-horizontal-dark-background.svg",
+      "bytes": 8559,
+      "sha256": "397565eae981bd50e8782c1a4b09d675866743c25d06fc1da22bdfd808f567a9"
     },
     {
-      "path": "svg/mishkal-horizontal-light-background.svg",
-      "bytes": 3925,
-      "sha256": "be9d44914bb2d20adbfd74d2f281b132bf9fd222fd5a8621f6a71f234e29da5f"
+      "path": "svg/phioon-horizontal-ink.svg",
+      "bytes": 8512,
+      "sha256": "7ba20eab626031175bea0585603c98f5628ec152c2046a8df39c2617c1ab3f08"
     },
     {
-      "path": "svg/mishkal-horizontal-white.svg",
-      "bytes": 3893,
-      "sha256": "9075a89af19f69a704a6790e88575ef7f35d6794be6dbe0cd43324797586b3aa"
+      "path": "svg/phioon-horizontal-light-background.svg",
+      "bytes": 8559,
+      "sha256": "da1b48237f96cfd861deb515c97fe3089f44204cad75b938fb19d8664a24ee49"
     },
     {
-      "path": "svg/mishkal-stacked-black.svg",
-      "bytes": 3889,
-      "sha256": "04db429ffbfd325200ee4dab28f4f0c0e0bb65a272083b9c042d564be434870f"
+      "path": "svg/phioon-horizontal-white.svg",
+      "bytes": 8512,
+      "sha256": "b79da441c711f2099f2208614a535ca5fe31f7c4709df1e2c536849a0aae28fe"
     },
     {
-      "path": "svg/mishkal-stacked-color.svg",
-      "bytes": 3889,
-      "sha256": "575cd72390a90376ce55b1f28678244ee6871b0b84a6dfc371c82f868ead522f"
+      "path": "svg/phioon-stacked-black.svg",
+      "bytes": 8482,
+      "sha256": "e61ea013ae0f1066ceaa338209e89f6ef1f7a4529c687d2cb2b341abca32c517"
     },
     {
-      "path": "svg/mishkal-stacked-ink.svg",
-      "bytes": 3889,
-      "sha256": "6dcd364de1eb130e989c07c78ca2f183a8f6460a48fb3c17795a0c33ddb6310d"
+      "path": "svg/phioon-stacked-color.svg",
+      "bytes": 8482,
+      "sha256": "b95fe042a5ea6b643b66c618244b4733faf54b2f988886deafc4aa5fd6dae829"
     },
     {
-      "path": "svg/mishkal-stacked-white.svg",
-      "bytes": 3889,
-      "sha256": "14a5392e1e3027ef6e875117d3ede061bea0ffa271f1026c6e5f68e85b10cac9"
+      "path": "svg/phioon-stacked-ink.svg",
+      "bytes": 8482,
+      "sha256": "be9e931b51c2ed12e4385b984696ae497873d0395a08166737c03cce26d47100"
     },
     {
-      "path": "svg/mishkal-symbol-black.svg",
-      "bytes": 1104,
-      "sha256": "038df67fe0ba45df7b78f4120cc60cb88e0040a5939cdd95ba3b925600f057bf"
+      "path": "svg/phioon-stacked-white.svg",
+      "bytes": 8482,
+      "sha256": "ffdb219634fb9bb8e40a69929e549b1332e1c3abbcfa5dd32a602b3427af7777"
     },
     {
-      "path": "svg/mishkal-symbol-color.svg",
-      "bytes": 1104,
-      "sha256": "c9b03a204c7c9897c96a6737caf7313afd4eb1beed1d8960f8e80b0f37855277"
+      "path": "svg/phioon-symbol-black.svg",
+      "bytes": 1073,
+      "sha256": "88e1cb437ac96e99abcaa1f96d100a22199b7661b0549fc1c4572f0881c49dca"
     },
     {
-      "path": "svg/mishkal-symbol-ink.svg",
-      "bytes": 1104,
-      "sha256": "c2f5d4f846e1361961c149b60d11aa2ea8439215faa8d4afe02721e7fee9ee0a"
+      "path": "svg/phioon-symbol-color.svg",
+      "bytes": 1073,
+      "sha256": "fd10b09dd6d04526976d612937c49de014cd32098de78e646685c0a381a2aeaa"
     },
     {
-      "path": "svg/mishkal-symbol-small-black.svg",
-      "bytes": 1067,
-      "sha256": "cf4e80c6691be62ec038fccd2d118be281a3840cd96541c69043c9bb5a0c36a1"
+      "path": "svg/phioon-symbol-ink.svg",
+      "bytes": 1073,
+      "sha256": "1105378a500196276beb1567a364bf43b2155645325b8bf0ade89b185e94db45"
     },
     {
-      "path": "svg/mishkal-symbol-small-color.svg",
-      "bytes": 1067,
-      "sha256": "ae71a17f524d7ce2b5f6a73374b0e2d9da1f8df1aad3040f87b1f483cc98c625"
+      "path": "svg/phioon-symbol-small-black.svg",
+      "bytes": 1036,
+      "sha256": "731b121008e31271cca45c4076830a9c5b5a7ef7da6a01a8efdb929ae640f513"
     },
     {
-      "path": "svg/mishkal-symbol-small-ink.svg",
-      "bytes": 1067,
-      "sha256": "980759dcddd06cab22769d05ad899357ac26ff8bb4750ac57c2946665394a678"
+      "path": "svg/phioon-symbol-small-color.svg",
+      "bytes": 1036,
+      "sha256": "706b726a1f02ba3d6c45b6154297e3b8f7bfd399d16729f7972bd8d9615d2e71"
     },
     {
-      "path": "svg/mishkal-symbol-small-white.svg",
-      "bytes": 1067,
-      "sha256": "50f59edc539f7bfb441dd0895bddd25ae53f300d7430fdda45418de980ac8297"
+      "path": "svg/phioon-symbol-small-ink.svg",
+      "bytes": 1036,
+      "sha256": "9bfda0b302cbd5580a4563f124b02eae903f2a2569edd2abdd832d10f636dddc"
     },
     {
-      "path": "svg/mishkal-symbol-white.svg",
-      "bytes": 1104,
-      "sha256": "1558a7210d1d3416427046abb3e900a558ff72ecfd3feb2f81e41c34b44f6647"
+      "path": "svg/phioon-symbol-small-white.svg",
+      "bytes": 1036,
+      "sha256": "08d0a0100ff09d28317bb3302bc304012e0ddb959ab072fd087082d1e6b98bd5"
     },
     {
-      "path": "svg/mishkal-wordmark-black.svg",
-      "bytes": 2957,
-      "sha256": "dbfb0f9f4455fa0bf4bd3e3280517d5f389df0ee0721ea499bd6ac718c25ac07"
+      "path": "svg/phioon-symbol-white.svg",
+      "bytes": 1073,
+      "sha256": "4b3937803cd5f53dbe526f551c343a3444f7f865e2c16d6bae7305fe31d782d4"
     },
     {
-      "path": "svg/mishkal-wordmark-color.svg",
-      "bytes": 2957,
-      "sha256": "e53a9d0abcd0e2338fd7f8e29e121d3921ff9048615144769a295a5b2c016c2e"
+      "path": "svg/phioon-wordmark-black.svg",
+      "bytes": 7544,
+      "sha256": "02ad9ff944e386b9ee13a3657e7a0b0aaf24b02168541b0e4e1cc4ce1dece7fa"
     },
     {
-      "path": "svg/mishkal-wordmark-ink.svg",
-      "bytes": 2957,
-      "sha256": "e53a9d0abcd0e2338fd7f8e29e121d3921ff9048615144769a295a5b2c016c2e"
+      "path": "svg/phioon-wordmark-color.svg",
+      "bytes": 7544,
+      "sha256": "2f9fae16c24e30b6b2472a5f9f929038bc1a5f27e018918045b16616966afe83"
     },
     {
-      "path": "svg/mishkal-wordmark-white.svg",
-      "bytes": 2957,
-      "sha256": "53fd92dab5e1debfa8d1c1ed83adac190542452a22a13ffe4853918414dc9f13"
+      "path": "svg/phioon-wordmark-ink.svg",
+      "bytes": 7544,
+      "sha256": "c464356b22c035ec97dba8433cff5a544e89b41292b44700f6f56afe1dad457f"
+    },
+    {
+      "path": "svg/phioon-wordmark-white.svg",
+      "bytes": 7544,
+      "sha256": "21cf91ccadaa624d8ab8b75c1315435d79cef6824dba1aa8358634d020877335"
     },
     {
       "path": "tests/test_brand_distribution.py",
-      "bytes": 22699,
-      "sha256": "eef8614abc10e8d61cfde0c68d59cab3924d304a1793020bfb6cebc8df9d6c0e"
+      "bytes": 28183,
+      "sha256": "4b0bbed9fa3a1e674390834472c57b3186c2697651c0ae2273faf14af96d5dad"
     }
   ]
 }
