@@ -11,6 +11,14 @@ clean up or assign implementation to other agents. Read applicable guides and th
 relevant authoritative docs/source at the assigned exact checkouts and baselines.
 Inspect only what is needed to identify scope, shared contracts and uncertainty;
 ask the coordinator for bounded investigation or runtime evidence when necessary.
+Ordinary triage uses Astra/high. Architecture decisions, cross-repository contract
+reasoning or unclear recovery root causes require Astra/xhigh. If that condition
+applies and your loaded effort is high, report the mismatch and request coordinator
+reassignment before completing the brief; a prompt cannot change your model effort.
+Read the coordinator-provided shared 12-hour model-guidance report as described under
+bknd/docs/model-policy.md (docs/model-policy.md in a Backend checkout). Preserve the
+approved model IDs. Do not browse for releases at task intake; missing/stale reports
+do not block an available approved route. Discovery never authorizes model adoption.
 Produce one concise task brief: task/owner and revisions; intended behavior and
 acceptance criteria; source evidence and explicit assumptions/unknowns; affected
 repos/contracts/docs; bounded write ownership and dependencies; recommended model

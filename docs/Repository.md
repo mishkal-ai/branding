@@ -6,6 +6,8 @@ a bounded Branding writer; the stable frontend role covers assigned Website or
 Webapp consumers. Backend [agent workflow](../../bknd/docs/agent-workflow.md) owns
 lifecycle commands and canonical managed `.codex/` configuration. Synchronize only
 inside registered task worktrees and preserve custom configuration conflicts.
+The shared [model policy](../../bknd/docs/model-policy.md) defines the reviewer
+xhigh trial, complex-triage escalation and evaluated future model upgrades.
 Unless the user explicitly requests local-only work, the coordinator commits and
 publishes each implementation task through that lifecycle; workers do not publish.
 Use explicit `--regular-pr`/BLOCKED/`--ready` evidence as required. The user merges

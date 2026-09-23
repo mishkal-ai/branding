@@ -51,7 +51,17 @@ Do not edit copies independently or overwrite conflicting custom settings.
 
 ## Initial triage
 
-Before implementation, invoke `mishkal_triage` (Astra/high) for every new feature,
+Use Astra/xhigh for independent consequential review. Ordinary triage stays
+Astra/high; architecture decisions, cross-repository contract reasoning and unclear
+recovery root causes require Astra/xhigh. A fixed loaded role cannot be upgraded
+by a prompt: use an explicit Astra/xhigh default agent with the complete role
+instructions and read-only boundaries, or report the unavailable prerequisite.
+Follow the [shared model policy](../bknd/docs/model-policy.md) for dated official-guidance checks, measured trials
+and reviewed model upgrades; never silently select a newly released model.
+
+
+Before implementation, invoke triage (Astra/high ordinarily; Astra/xhigh for complex cases above)
+for every new feature,
 cross-repo change, unclear bug or consequential execution, risk, protocol,
 persistent-state, recovery, workflow-authority, security or destructive-tooling
 change. Uncertainty requires triage. Only narrow, obvious, non-consequential edits
@@ -67,8 +77,8 @@ evidence; pause affected implementation and return material discoveries for
 retriage. Independent consequential review must use a different agent from the
 triager and implementers and challenge both plan and diff. Triage cannot waive
 existing gates. If the custom role is unavailable, use an explicitly assigned
-read-only Astra/high agent; if that model is unavailable, report the blocker
-before affected implementation.
+read-only Astra agent with high for ordinary triage or xhigh for complex triage;
+if the required model/effort is unavailable, report the blocker before affected implementation.
 
 ## Coordination, evidence and delivery
 
@@ -76,7 +86,7 @@ The coordinator owns scope, acceptance criteria, shared contracts and final inte
 
 Use compact handoffs: task/owner, checkout/baseline, objective/acceptance criteria, writable paths, required guides/docs, sibling revisions, checks and next action. The coordinator reads relevant context once and hands workers paths/symbols; workers still read applicable guides. Reuse investigators and omit full history by default. Keep small/tightly coupled work with the coordinator; add workers only for independent benefit. The concurrency ceiling is not a quota. Isolate shared test resources or run sequentially; designate one check owner.
 
-Choose Sol medium for routine coordination/implementation, Terra low (builtin explorer model) for focused read-only exploration, and Astra high for consequential execution, risk, protocol, persistent-state, recovery, workflow-authority, security or destructive-tooling analysis/implementation; independently review those changes with Astra high. Ultra needs explicit exceptional escalation. Do not stop unfinished requirements for budget. After repeated failed approaches, preserve evidence and escalate the blocker or request runtime evidence. Where telemetry exists, measure usage per accepted PR; do not equate tokens with billed credits or promise savings.
+Choose Sol medium for routine coordination/implementation, Terra low (builtin explorer model) for focused read-only exploration, and Astra high for consequential execution, risk, protocol, persistent-state, recovery, workflow-authority, security or destructive-tooling analysis/implementation; independently review those changes with Astra xhigh. Ultra needs explicit exceptional escalation. Do not stop unfinished requirements for budget. After repeated failed approaches, preserve evidence and escalate the blocker or request runtime evidence. Where telemetry exists, measure usage per accepted PR; do not equate tokens with billed credits or promise savings.
 
 Reuse a check only for its unchanged exact SHA, environment and command; required CI and independent review remain required. Finish source/docs before tests and rerun only checks affected by later changes. The coordinator reviews the whole task diff against baseline. The local register/lock coordinate local work only. Workers do not publish, merge, deploy or clean up. Unless the user explicitly requests local-only work, every implementation task commits, pushes and opens/updates its registered PR; reconcile uncertainty and never force-push. Use `--regular-pr` and BLOCKED/`--ready` evidence as required; they are not GitHub protection. The user merges manually unless explicitly delegated. Publication never authorizes merge, deployment or cleanup.
 

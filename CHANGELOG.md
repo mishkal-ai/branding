@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+- Synchronize the reviewer xhigh trial and conditional complex-triage guidance;
+  retain explicit approved models and reviewed future upgrades. Regenerate the
+  governance inventory without changing brand version, artwork or web distribution.
+
 - Document public, exact-revision consumer acquisition and remove the obsolete
   private-repository credential requirement. This changes no artwork, release
   version, web distribution or consumer lock.
